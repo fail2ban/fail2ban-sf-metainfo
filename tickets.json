@@ -1,0 +1,71 @@
+{"tickets": [],
+"tracker_config":{
+  "_id": "528a31cdbcf63a11fe33315a",
+  "options": {
+    "ordinal": 13,
+    "mount_point": "tickets",
+    "TicketMonitoringType": null,
+    "EnableVoting": false,
+    "TicketMonitoringEmail": "",
+    "mount_label": "Tickets"
+  }
+},
+"milestones":[
+  {
+    "due_date": null,
+    "complete": false,
+    "name": "1.0",
+    "closed": 0,
+    "total": 0,
+    "description": null
+  },
+  {
+    "due_date": null,
+    "complete": false,
+    "name": "2.0",
+    "closed": 0,
+    "total": 0,
+    "description": null
+  }
+],
+"custom_fields":[
+  {
+    "milestones": [
+      {
+        "due_date": null,
+        "complete": false,
+        "name": "1.0"
+      },
+      {
+        "due_date": null,
+        "complete": false,
+        "name": "2.0"
+      }
+    ],
+    "type": "milestone",
+    "name": "_milestone",
+    "label": "Milestone"
+  }
+],
+"open_status_names":"open unread accepted pending",
+"closed_status_names":"closed wont-fix",
+"saved_bins":[
+  {
+    "sort": "mod_date_dt desc",
+    "_id": "528a31cdbcf63a11fe333164",
+    "terms": "!status:wont-fix && !status:closed",
+    "summary": "Changes"
+  },
+  {
+    "sort": "",
+    "_id": "528a31cdbcf63a11fe333163",
+    "terms": "status:wont-fix or status:closed",
+    "summary": "Closed Tickets"
+  },
+  {
+    "sort": "",
+    "_id": "528a31cdbcf63a11fe333162",
+    "terms": "!status:wont-fix && !status:closed",
+    "summary": "Open Tickets"
+  }
+]}

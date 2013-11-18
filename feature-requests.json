@@ -1,0 +1,3054 @@
+{"tickets": [{
+  "status": "open",
+  "reported_by_id": "4e8a1d76b9363c20cf000dcf",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "lostcontrol",
+  "description": "Hi, I would love to see pernament banning for hosts\r\nthat were banned\r\nmore that defined amount of times, I saw in my logs few\r\nip's that are\r\nbanned every couple of days and I blocked them in my\r\niptables, I would\r\nbe great if fail2ban did that for me.Thanks",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Permanent banning",
+  "discussion_thread": {
+    "_id": "41e97ea0",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=1376189\n\nI like to second that feature as well thanks.",
+        "attachments": [],
+        "author": "coolsylver",
+        "timestamp": "2005-11-09 23:12:06",
+        "slug": "b2ea",
+        "subject": "#1 Permanent banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nNot really the requested feature but I added in CVS HEAD\r\n\\(will be 0.6.1\\) the possibility to set bantime to a negative\r\nvalue for permanent banning.\r\n\r\nbantime = -1\r\n\r\nThis will never unban banned IP addresses.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-12-17 00:04:16",
+        "slug": "5fdb",
+        "subject": "#1 Permanent banning"
+      },
+      {
+        "text": "Logged In: NO \n\nI would also like to see a feature similar to this.\r\nIt would be useful if it were possible to increase the time a host is blocked if the host attempted to connect while still blocked.  For example, if while blocked for one hour a host attempted to connect, the ban time would be increased to two hours, then four, then eight, and so on with permament banning being possible after some ban time threshold is met.  It would be good if the factor at which the ban time increased could be configured.  All of this might also be useful towards satisfying request 1441895.  Thanks.\r\n",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2007-05-22 22:01:24",
+        "slug": "9bc7",
+        "subject": "#1 Permanent banning"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-06-29 05:55:32",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3042718464f1a1300df",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/41e97ea0/",
+  "ticket_num": 1,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-06-29 05:55:32"
+},{
+  "status": "closed",
+  "reported_by_id": "4e8a1d76b9363c20cf000dcf",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "lostcontrol",
+  "description": "When reporting access violations to ISPs, a log of the\r\nattempted violation needs to be included. Possibly the\r\nbest time to do this is when the IP address is removed\r\nfrom the ban list.",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Report for ISPs",
+  "discussion_thread": {
+    "_id": "94926ddb",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nThere is a \"mail-whois\" in Subversion repository for 0.7.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:24:28",
+        "slug": "be33",
+        "subject": "#2 Report for ISPs"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:24:28",
+        "slug": "35e1",
+        "subject": "#2 Report for ISPs"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-06 19:24:28",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3082718464f1a130116",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/94926ddb/",
+  "ticket_num": 2,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-06-29 06:00:40"
+},{
+  "status": "closed",
+  "reported_by_id": "4e8a1d76b9363c20cf000dcf",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "lostcontrol",
+  "description": "Put the firewall rule as a configuration file option.\r\nSometimes it is useful not to use a DROP rule for the\r\nban rule. Additionally it would be useful to be able to\r\nspecify multiple firewall rules for when an IP address\r\nis banned/unbanned.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Firewall rules in configuration file",
+  "discussion_thread": {
+    "_id": "94d6fcf9",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAvailable in CVS tree. I created the new branch FAIL2BAN-0\\_5.\r\n\r\nIt is possible to set ban/unban rules for each section. A\r\nfailed attempt in one section does not count in the others.\r\nSeems to be more logical.\r\n\r\nTake care that the firewall rules are executed with Fail2Ban\r\nuser \\(root\\) so DO NOT PUT a \"rm -rf /\" rule ;-\\)",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-05 13:28:05",
+        "slug": "e080",
+        "subject": "#3 Firewall rules in configuration file"
+      },
+      {
+        "text": "- **summary**: Firewall rule in configuration file --> Firewall rules in configuration file\n- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-05 13:28:05",
+        "slug": "4623",
+        "subject": "#3 Firewall rules in configuration file"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nYaroslav Halchenko suggested to also add a configuration\r\noption to be invoked on startup and also at the end of Fail2Ban.\r\n\r\nSeems to be a good idea :-\\)",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-07 09:00:28",
+        "slug": "208e",
+        "subject": "#3 Firewall rules in configuration file"
+      },
+      {
+        "text": "- **status**: closed --> open",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-07 09:00:28",
+        "slug": "425b",
+        "subject": "#3 Firewall rules in configuration file"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAvailable in FAIL2BAN-0\\_5",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-07 22:37:03",
+        "slug": "0808",
+        "subject": "#3 Firewall rules in configuration file"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-07 22:37:03",
+        "slug": "ed1a",
+        "subject": "#3 Firewall rules in configuration file"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-07-07 22:37:03",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3092718464f1a130127",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/94d6fcf9/",
+  "ticket_num": 3,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-06-29 06:03:27"
+},{
+  "status": "closed",
+  "reported_by_id": "4e8a1d76b9363c20cf000dcf",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "lostcontrol",
+  "description": "Inotify and Gamin provides a File Alteration Monitor.\r\nWith the help of inotify, the kernel can notify Gamin\r\nthat the log file has been modified and then Fail2Ban\r\ncan be notified of this change.\r\n\r\nThis would provide a much more efficient way of looking\r\nat the log files. Moreover, Gamin can also do polling\r\nif no inotify/dnotify kernel is available.",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Use FAM (inotify + gamin) instead of polling",
+  "discussion_thread": {
+    "_id": "2fb4288f",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nWhat is the difference between FAM and Gamin? Most/many \r\nhave FAM installed but not Gamin. For me I prefer FAM as I \r\nalready use it for other applications \\(like Courier-imap\\).",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-15 14:37:26",
+        "slug": "64de",
+        "subject": "#4 Use FAM (inotify + gamin) instead of polling"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nWhat is the difference between FAM and Gamin? Most/many \r\nhave FAM installed but not Gamin. For me I prefer FAM as I \r\nalready use it for other applications \\(like Courier-imap\\).",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-15 14:38:42",
+        "slug": "2ca9",
+        "subject": "#4 Use FAM (inotify + gamin) instead of polling"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nWhat is the difference between FAM and Gamin? Most/many \r\nhave FAM installed but not Gamin. For me I prefer FAM as I \r\nalready use it for other applications \\(like Courier-imap\\).",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-15 14:41:35",
+        "slug": "762d",
+        "subject": "#4 Use FAM (inotify + gamin) instead of polling"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nYou can get more info about Gamin here --&gt;\r\nhttp://www.gnome.org/~veillard/gamin/ or here --&gt;\r\nhttp://veillard.com/Talks/2004GSummit/slide1-2.html\r\n\r\nAs written on the website: \"gamin should be binary and\r\nsource code compatible with FAM 2.6.8.\" So it should be\r\npossible to use gamin python bindings or python-fam.\r\n\r\nYou should be able to use Gamin with Courier-imap I think...",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-15 14:55:13",
+        "slug": "2cf3",
+        "subject": "#4 Use FAM (inotify + gamin) instead of polling"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nGamin support in Subversion. Will be in 0.7.3",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-18 12:00:50",
+        "slug": "a52e",
+        "subject": "#4 Use FAM (inotify + gamin) instead of polling"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-18 12:00:50",
+        "slug": "e80f",
+        "subject": "#4 Use FAM (inotify + gamin) instead of polling"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-18 12:00:50",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf30c2718464f1a13014c",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/2fb4288f/",
+  "ticket_num": 4,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-06-29 16:33:41"
+},{
+  "status": "closed",
+  "reported_by_id": "4e8a1d76b9363c20cf000dcf",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "lostcontrol",
+  "description": "Add support for CIDR mask in ignore\\_ip address field\r\nie. 192.168.10.0/24",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Add support for CIDR mask in ignore_ip",
+  "discussion_thread": {
+    "_id": "6e2aac95",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded in the CVS branch FAIL2BAN-0\\_5",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 12:46:41",
+        "slug": "d76c",
+        "subject": "#5 Add support for CIDR mask in ignore_ip"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 12:46:41",
+        "slug": "ec38",
+        "subject": "#5 Add support for CIDR mask in ignore_ip"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-07-12 12:46:41",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf30e2718464f1a130172",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/6e2aac95/",
+  "ticket_num": 5,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-07-12 12:42:11"
+},{
+  "status": "closed",
+  "reported_by_id": "5178435de88f3d0a8f5eb5e3",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "andewid",
+  "description": "Instead of appending everying to the INPUT chain use a \r\ncustom chain:\r\n\r\nFirst create the new chain and add the rule to jump there:\r\n\r\niptables -I INPUT -i eth1 -p tcp --dport ssh -j FWBAN\r\niptables -A FWBAN -j RETURN\r\n\r\nThen to add ips:\r\n\r\niptables -I FWBAN 1 -i eth1 -s &lt;ip&gt; -j DROP\r\n\r\nThis way you would only use resources for the IPs that \r\ntry to hack in to SSH.\r\n\r\nOf course you may want to block all access from these \r\nIPs. Then you should not use --dport, but only this:\r\n\r\niptables -I INPUT -i eth1 -j FWBAN\r\nor\r\niptables -I INPUT -i eth1 -m state --state NEW -j FWBAN\r\n\r\nIt is just a thought.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Use a separate chain for banning",
+  "discussion_thread": {
+    "_id": "3c088a23",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nHi,\r\n\r\nThis can be done easily with Fail2Ban &gt;= 0.5.0. Firewall\r\ncommands are defined in the configuration file.\r\n\r\nI still need to add better iptables rules by default in the\r\nconfiguration file.\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 15:33:22",
+        "slug": "fbed",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nYes I saw this and am using it myself. It was just a \r\nsuggestion to use as default to avoid creating extreamly a \r\nlarge INPUT chain, and also to make it easier to understand \r\nwhich IPs came from Fail2Ban and which were not.\r\n\r\nPerhaps you could also use keywords in the config file?\r\n\r\nipt=/sbin/iptables\r\next=eth1\r\nint=eth0\r\nif=$ext\r\nchain=FWBAN\r\ntarget=DROP \\(some migth want to use REJECT?\\)\r\n\r\n$ipt -I $chain -i $if -s $ip -j $target",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 15:44:43",
+        "slug": "d649",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nI will change the default values in fail2ban.conf in order\r\nto create a new chain and add banned ip to it. As you said,\r\nit will be easier to understand what is going on.\r\n\r\nI will look if keywords in the configuration file is easy to\r\nhandle or not. It would be a good idea but it is possible\r\nthat it would add too much complexity...\r\n\r\nThanks for your comments :-\\)",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 16:02:45",
+        "slug": "b052",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nYes you are right that keeping things easy is probably more \r\nimportant. =\\) The $keyword things would only be for \r\nconvenience and doesn't really add any specific functionality.",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 16:04:48",
+        "slug": "264f",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nYes you are right that keeping things easy is probably more \r\nimportant. =\\) The $keyword things would only be for \r\nconvenience and doesn't really add any specific functionality.",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 16:08:50",
+        "slug": "a6db",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nYes you are right that keeping things easy is probably more \r\nimportant. =\\) The $keyword things would only be for \r\nconvenience and doesn't really add any specific functionality.",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 16:10:05",
+        "slug": "5064",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded in CVS branch FAIL2BAN-0\\_5",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-15 14:15:26",
+        "slug": "f7d0",
+        "subject": "#6 Use a separate chain for banning"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-15 14:15:26",
+        "slug": "10b1",
+        "subject": "#6 Use a separate chain for banning"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-07-15 14:15:26",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf30f2718464f1a130183",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/3c088a23/",
+  "ticket_num": 6,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-07-12 14:57:01"
+},{
+  "status": "open",
+  "reported_by_id": "5178435de88f3d0a8f5eb5e3",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "andewid",
+  "description": "It would be nice to support IPv6 in fail2ban. It should not \r\nbe that difficult, especially since the ip6tables takes \r\nexactly the same syntax. The only difference would be to \r\nparse the log files a little different to match the IPv6 IP.",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "IPv6 support",
+  "discussion_thread": {
+    "_id": "e9c71806",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nNice idea ;-\\)\r\n\r\nNo problem with ip6tables since with Fail2Ban &gt;= 0.5.0\r\nfirewall rules are defined in the configuration file.\r\n\r\nDo you have SSH \\(or any other service\\) log files with IPv6\r\naddresses ?\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 15:37:01",
+        "slug": "4286",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nSure. here is an example where I tried to hack myself with a \r\nrandom username ;\\)\r\n\r\n\r\nJul 12 17:26:45 mail sshd\\[19196\\]: Server listening on :: port \r\n22\\.\r\nJul 12 17:27:40 mail sshd\\[19219\\]: Accepted keyboard-\r\ninteractive/pam for root from 2001:16d8:ff02:0:9176:5b40:a39f:\r\n644f port 1048 ssh2\r\nJul 12 17:27:40 mail sshd\\(pam\\_unix\\)\\[19222\\]: session opened \r\nfor user root by root\\(uid=0\\)\r\nJul 12 17:47:03 mail sshd\\[20192\\]: Invalid user fdds from 2001:\r\n16d8:ff02:0:9176:5b40:a39f:644f\r\nJul 12 17:47:04 mail sshd\\(pam\\_unix\\)\\[20194\\]: check pass; \r\nuser unknown\r\nJul 12 17:47:04 mail sshd\\(pam\\_unix\\)\\[20194\\]: authentication \r\nfailure; logname= uid=0 euid=0 tty=ssh ruser= rhost=2001:\r\n16d8:ff02:0:9176:5b40:a39f:644f\r\nJul 12 17:47:06 mail sshd\\[20192\\]: error: PAM: Authentication \r\nfailure for illegal user fdds from 2001:16d8:ff02:0:9176:5b40:\r\na39f:644f\r\nJul 12 17:47:06 mail sshd\\[20192\\]: Failed keyboard-interactive/\r\npam for invalid user fdds from 2001:16d8:ff02:0:9176:5b40:\r\na39f:644f port 1049 ssh2\r\n\r\nRemember though that some matches doesn't work. \r\nSpecifically \"-m state\" as ipv6 iptables doesn't have conntrack \r\nyet.",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 15:48:40",
+        "slug": "a4ab",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nI am running courier-mta/IMAP/POP3 and Apache and some \r\nother services on IPv6 too.\r\n\r\ncourier log:\r\nJul 12 17:53:51 mail imapd: Connection, ip=\\[::ffff:192.168.0.10\\]\r\nJul 12 17:53:51 mail imapd: LOGIN, user=admin@tnonline.\r\nnet, ip=\\[::ffff:192.168.0.10\\], protocol=IMAP\r\n\r\nA failed attempt to login:\r\nJul 12 17:58:23 mail imapd: LOGIN FAILED, method=CRAM-\r\nMD5, ip=\\[::ffff:192.168.0.10\\]\r\n\r\nThese are connections from a IPv4 host. Courier listen on IPv6 \r\nand so the address you see in the log is a a IPv4 address \r\nconverted into IPv6 address space. It may be important to be \r\nable to filter this properly.\r\n\r\nNot sure what I can give you with Apache. I do not use \r\nApache for authentication for my websites. Here are two failed \r\nattemts to access a file.\r\n\r\n\\[Tue Jul 12 17:36:24 2005\\] \\[error\\] \\[client 82.182.126.23\\] File \r\ndoes not exist: /var/www/localhost/htdocs/tnonline.net/sumthin\r\n\\[Tue Jul 12 18:00:20 2005\\] \\[error\\] \\[client 2001:16d8:ff02:0:\r\n9176:5b40:a39f:644f\\] File does not exist: /var/www/localhost/\r\nhtdocs/tnonline.net/dfsd\r\n\r\n",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 16:02:16",
+        "slug": "fa36",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nThank you very much :-\\)\r\n\r\nIs it possible to give an IPv4 address to ip6tables? I read\r\na bit the man pages and it does not seems to be possible :-/\r\n\r\nIn general, do you use iptables and ip6tables in parallel?\r\n\r\nI think a good idea would be to replace the &lt;ip&gt; tag by\r\n&lt;ipv4&gt; and add &lt;ipv6&gt;. An example:\r\n\r\n&lt;ipv4&gt; = 192.168.0.10\r\n&lt;ipv6&gt; = ::ffff:192.168.0.10\r\n\r\nor\r\n\r\n&lt;ipv4&gt; = undefined\r\n&lt;ipv6&gt; = 2001:16d8:ff02:0:9176:5b40:a39f:644f\r\n\r\nIs that right that 2001:16d8:ff02:0:9176:5b40:a39f:644f does\r\nnot have a corresponding IPv4 address?\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 16:31:57",
+        "slug": "03cc",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nNo you cannot give ipv4 addresses to ip6tables =/\r\n\r\nPerhaps you would need to do a test:\r\n\r\nif \\(ipv6==true\\)\\{\r\nip6tables ....\r\nelse\r\niptables ....\r\n\\}\r\n\r\nYes you are right that ipv6 addresses do not have \r\ncorresponding ipv4 variants. Only the opposite - which is only \r\ntrue for applications listening on both IPv6 and IPv4. So if I \r\ninstruct my sshd to only listen on 0.0.0.0:22 instead of \\[::\\]:22 \r\nit will only have pure IPv4 addresses in the log.",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 16:45:09",
+        "slug": "44a2",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAlright but if I give ::ffff:192.168.0.10 to ip6tables, it\r\nshould work. No?\r\n\r\nThe idea is to convert every IPv4 addresses to IPv6, take\r\nIPv6 addresses as they are and use ip6tables with &lt;ipv6&gt;.\r\n\r\nIf you do not need IPv6 support, just use iptables with\r\n&lt;ipv4&gt; tag.\r\n\r\nGood or bad idea?",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-12 17:11:41",
+        "slug": "83dc",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=820001\n\nYes you can give ::ffff:192.168.0.10 to ip6tables, but it will not \r\nwork as you would expect. The reason it would not work is \r\nbecause the source address is really IPv4 192.168.0.10. The \r\nIPv6 transformation is only done in the last step by the \r\nlistening socket after the packet has gone through the firewall. \r\nAt least this is what I believe. I will try to look it up.",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-12 17:19:24",
+        "slug": "9c56",
+        "subject": "#7 IPv6 support"
+      },
+      {
+        "text": "Hi.\n\nWhat's the status on this?\n\nCheers,\nChris.",
+        "attachments": [],
+        "author": "calestyo",
+        "timestamp": "2010-09-27 12:17:37",
+        "slug": "eee7",
+        "subject": "#7 IPv6 support"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-07-12 14:58:31",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3132718464f1a1301b3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/e9c71806/",
+  "ticket_num": 7,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-07-12 14:58:31"
+},{
+  "status": "closed",
+  "reported_by_id": "5178435de88f3d0a8f5eb5e3",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "andewid",
+  "description": "I'd like to see fail2ban to be able to log to the logfile \r\nspecified in the config \\(or to syslog\\) even when running \r\nfail2ban in the foreground.\r\n\r\nThe reson is that I want to be able to run fail2ban through \r\nsupervice - a monitoring daemon that restarts crashed \r\napplications. Supervice can also on-demand restart, \r\npause and stopp applications.\r\n\r\nSupervise is part of daemontools \\(Gentoo: sys-process/\r\ndaemontools-0.76-r4\\): http://cr.yp.to/daemontools.html",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Allow logging to file even when running in foreground",
+  "discussion_thread": {
+    "_id": "0b2c211e",
+    "posts": [
+      {
+        "text": "- **summary**: Allow loggin to file even when running in foreground --> Allow logging to file even when running in foreground",
+        "attachments": [],
+        "author": "andewid",
+        "timestamp": "2005-07-15 14:30:53",
+        "slug": "1507",
+        "subject": "#8 Allow logging to file even when running in foreground"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded in CVS branch FAIL2BAN-0\\_5.\r\n\r\nThe options \"-l\" and \"logfile\" do no more exist.\r\n\"logtargets\" in fail2ban.conf replaces them. Now you can set\r\nmultiple logging targets such as STDOUT, STDERR, SYSLOG and\r\none or several files. ",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-15 19:32:36",
+        "slug": "eb87",
+        "subject": "#8 Allow logging to file even when running in foreground"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-07-15 19:32:36",
+        "slug": "a3df",
+        "subject": "#8 Allow logging to file even when running in foreground"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-07-15 19:32:36",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3162718464f1a1301e5",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0b2c211e/",
+  "ticket_num": 8,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-07-15 14:30:18"
+},{
+  "status": "closed",
+  "reported_by_id": "5063215f71b75b10eb66cd41",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "gildea",
+  "description": "I'd like to see the addition of the opposite of a\r\n\"failregex\",\r\nwhich we might call an \"ignoreregex\".  This new regex would\r\nspecify log lines to ignore, even though they may match\r\nfailregex.\r\n\r\nFor example, fail2ban might monitor Apache logs to identify\r\nsites trying to hack the server with unusual URL\r\nrequests.  A\r\nsimple way to do this would be to block a site after\r\ntoo many\r\n404s.  However, some 404 errors are innocuous, such as\r\nlooking\r\nfor a non-existent \"/robots.txt\" or \"/favicon.ico\".  These\r\nharmless 404s could be removed from the failures count by\r\nusing ignoreregex to match them.\r\n\r\nI have fail2ban 0.5.2.\r\n",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "add ignoreregex",
+  "discussion_thread": {
+    "_id": "a217e159",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded to Subversion. Will be in 0.7.5.\r\n\r\nThanks",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-11-12 14:53:44",
+        "slug": "0c0d",
+        "subject": "#9 add ignoreregex"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-11-12 14:53:44",
+        "slug": "7558",
+        "subject": "#9 add ignoreregex"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-11-12 14:53:44",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3182718464f1a1301fc",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/a217e159/",
+  "ticket_num": 9,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-09-06 19:39:51"
+},{
+  "status": "closed",
+  "reported_by_id": "51acf31a2718464f1a13020e",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "wokflow",
+  "description": "I've done a little modification, because i need to\r\nignore fails for an administrator that had a dinamic IP.\r\n\r\nThe modification simply allows to add a field in the\r\nconfiguration with the domains that you want to ignore \r\n\\(ex foo.foodomain.com\\) very useful for those\r\nadministrators with dinamic dns service.\r\n\r\nThis is my first time using python, so if you want the\r\ncode, please tell me where to send it.",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "DNS ignore",
+  "discussion_thread": {
+    "_id": "b54aaece",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nHi,\r\n\r\nSorry for the late \\(\\!\\!\\) reply :\\( Could you send me a patch?\r\nFail2ban has already an \"ignoreip\" option and I will modify\r\nit to handle DNS too.\r\n\r\nThanks",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-02-16 13:24:08",
+        "slug": "2e59",
+        "subject": "#10 DNS ignore"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded to repository. Will be in 0.7.3\r\n\r\nThanks",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-27 20:33:17",
+        "slug": "fb9c",
+        "subject": "#10 DNS ignore"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-27 20:33:17",
+        "slug": "dd43",
+        "subject": "#10 DNS ignore"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-27 20:33:17",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf31a2718464f1a13020d",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/b54aaece/",
+  "ticket_num": 10,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-09-09 10:43:44"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "hi,\r\ngreat project, i'm very interested in.\r\nit would be great if you'd add a suse package in order\r\nto cover the remaining major distributions.\r\nuntil then, i'm not sure whether to implement the\r\nredhat or debian package in my suse9.1.\r\n\r\nbest regards\r\nniko",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "SuSE package",
+  "discussion_thread": {
+    "_id": "22960f32",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=1318868\n\nthis request is mine, but i forgot to login before submitting",
+        "attachments": [],
+        "author": "the_foster",
+        "timestamp": "2005-09-14 22:59:14",
+        "slug": "95df",
+        "subject": "#11 SuSE package"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nChristian Rauch provides RPM for SUSE 10 here:\r\n\r\nftp://ftp.gwdg.de/pub/linux/misc/suser-crauch/",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-02-16 11:59:49",
+        "slug": "a77d",
+        "subject": "#11 SuSE package"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-02-16 11:59:49",
+        "slug": "3257",
+        "subject": "#11 SuSE package"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-02-16 11:59:49",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf31e2718464f1a130241",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/22960f32/",
+  "ticket_num": 11,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-09-14 22:46:03"
+},{
+  "status": "closed",
+  "reported_by_id": "4d56bcc5bfc09e144e062049",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "ff-lightning",
+  "description": "I set fail2ban up for apache, apache-ssl and ssh. If an\r\nIP gets banned it would be interesting to know from\r\nwhich source the ban is coming.\r\n\r\nSuggestion: add a new filed like &lt;source&gt; to fail2ban.conf",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Add source field for email report",
+  "discussion_thread": {
+    "_id": "0da6ce68",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded in 0.5.5\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-10-26 22:12:54",
+        "slug": "3a8e",
+        "subject": "#12 Add source field for email report"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-10-26 22:12:54",
+        "slug": "7ad1",
+        "subject": "#12 Add source field for email report"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2005-10-26 22:12:54",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3202718464f1a130259",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0da6ce68/",
+  "ticket_num": 12,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-09-25 14:18:49"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hi,\r\nAny chance to be able to use the linux 'mail' command \r\nto send the emails please? \\(Rather than specifically \r\nhaving to login to a mail server\\). I'm would rather \r\nkeep port 25 locked down if possible.\r\n\r\nCheers,\r\nAlex\r\n\r\n\\(eg logwatch does it neatly where you can simply \r\nspecify the location of the 'mail' script and it \r\ntakes care of the rest\\).",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Email reporting via sendmail",
+  "discussion_thread": {
+    "_id": "fcb80045",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nFail2ban 0.7.x does not use Python modules for e-mails.\r\nNotifications are done using scripts which use \"mail\".",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:26:16",
+        "slug": "1845",
+        "subject": "#13 Email reporting via sendmail"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:26:16",
+        "slug": "75a3",
+        "subject": "#13 Email reporting via sendmail"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-06 19:26:16",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3212718464f1a13026a",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/fcb80045/",
+  "ticket_num": 13,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-12-13 20:51:29"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Some log programs \\(most notably multilog, from\r\ndaemontools\\) use tai64n representation of time. Could\r\nthe tai64n support be added to fail2ban?\r\n\r\nMore info about multilog files and tai64n can be found\r\nat  http://cr.yp.to/daemontools/multilog.html\r\n\r\nThanks,\r\nmr.spliff@gmail.com",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "tai64n time representation",
+  "discussion_thread": {
+    "_id": "3f43f349",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nHi,\r\n\r\nThis feature is already in CVS. Will be available in 0.6.1\r\nwhich will be soon released. You can just checkout a CVS\r\nversion.\r\n\r\nRegards,\r\n\r\nCyril Jaquier",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-01-22 10:00:25",
+        "slug": "3d84",
+        "subject": "#14 tai64n time representation"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-01-22 10:00:25",
+        "slug": "62a0",
+        "subject": "#14 tai64n time representation"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-01-22 10:00:25",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3222718464f1a13027b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/3f43f349/",
+  "ticket_num": 14,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-01-20 01:56:57"
+},{
+  "status": "closed",
+  "reported_by_id": "509c194b34309d3c63594001",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "rarig",
+  "description": "Please add a section to fail2ban.conf that supports \r\nthe vsftpd FTP server and can correctly parse \r\nthe /var/log/vsftpd.log file.\r\n\r\nThe format used in /var/log/vsftpd.log is as follows:\r\n\r\nWed Feb  8 12:34:43 2006 \\[pid 10390\\] FTP command: \r\nClient \"XXX.XXX.XXX.XXX\", \"USER foobar\"\r\nWed Feb  8 12:34:43 2006 \\[pid 10390\\] \\[foobar\\] FTP \r\nresponse: Client \"XXX.XXX.XXX.XXX\", \"530 Permission \r\ndenied.\"\r\n\r\nMuch tnx\\!\r\n\r\nHarry\r\n",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Add section in fail2ban.conf for FTP",
+  "discussion_thread": {
+    "_id": "99b841a3",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nvsftpd support is available in CVS version. Will be in 0.6.1.\r\n\r\nCould you please test CVS version and report any issue?\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-02-11 15:32:46",
+        "slug": "c966",
+        "subject": "#15 Add section in fail2ban.conf for FTP"
+      },
+      {
+        "text": "Logged In: NO \n\n...and for squid too, please. \\(The intranets are plagued by\r\nspyware\\). The /var/log/squid/access.log is as follows: \r\n\r\n1141089780.939      0 10.0.XX.XXX TCP\\_DENIED/407 1407 GET\r\nhttp://utils.winfixer.com/instlog/index.php? - NONE/- text/html\r\n\r\nThank you\\!",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2006-02-28 01:27:57",
+        "slug": "1fb7",
+        "subject": "#15 Add section in fail2ban.conf for FTP"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nPlease make a more detailed request about squid in a new ticket.\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:23:21",
+        "slug": "93d5",
+        "subject": "#15 Add section in fail2ban.conf for FTP"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:23:21",
+        "slug": "ed2a",
+        "subject": "#15 Add section in fail2ban.conf for FTP"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-06 19:23:21",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3242718464f1a13028c",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/99b841a3/",
+  "ticket_num": 15,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-02-08 13:42:39"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Is a ban time multiplied by the number of failed login\r\ncan be possible ?\r\n\r\nSomeone who made a mistake when typing password and\r\nbeing banned for some minute and a bruteforce attack\r\nbeing banned for multiple hours/day/month :\\)",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Ban time per tries",
+  "discussion_thread": {
+    "_id": "64475642",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-03-02 17:29:04",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3272718464f1a1302a8",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/64475642/",
+  "ticket_num": 16,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-03-02 17:29:04"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "\r\nPossible to override the default settings for\r\nmaxfailures, bantime and findtime for each sections\r\nmaking it possible to set individual optios for\r\napache,ssh and ftp.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "configuration options per sections",
+  "discussion_thread": {
+    "_id": "5e4041dd",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nThis is already possible. Just override the option in the\r\nsection.\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-03-16 18:55:43",
+        "slug": "407d",
+        "subject": "#17 configuration options per sections"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-03-16 18:55:43",
+        "slug": "c171",
+        "subject": "#17 configuration options per sections"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-03-16 18:55:43",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3272718464f1a1302af",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/5e4041dd/",
+  "ticket_num": 17,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-03-13 12:07:27"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "I found a script that prevents spammers. \r\nIt might be a nice feature to add to fail2ban in a\r\nfuture release\r\n\r\nhttp://www.albury.net.au/netstatus/technical.stuff/\r\n\r\nim sure something like this could be added to fail2ban.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "help preventing spam",
+  "discussion_thread": {
+    "_id": "cc3490d5",
+    "posts": [
+      {
+        "text": "This actually looks like a nice idea: To watch the SMTP logs and ban any IP that repeatedly tries to send spam. I'm not sure how effective this is \\(on my Exim installation, most IP's only try one or two messages and stop trying if those are rejected\\).\n\nAlso, my exim keeps a file /var/log/rejectlog logging all rejections. Some appropriate fai2ban configuration and regex should probably enable you to parse this logfile already and make this work. If you manage to create such a configuration, please include it here, which will make it much more likely it will be included in fail2ban.",
+        "attachments": [],
+        "author": "bigfoot_hunter",
+        "timestamp": "2009-09-10 09:48:24",
+        "slug": "8c6e",
+        "subject": "#18 help preventing spam"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-06-15 23:28:59",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3282718464f1a1302c0",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/cc3490d5/",
+  "ticket_num": 18,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2006-06-15 23:28:59"
+},{
+  "status": "closed",
+  "reported_by_id": "4cdca55f1be1ce040e000221",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "pabs3",
+  "description": "Example line \\(from syslog\\):\r\n\r\nJun 12 16:02:11 perthimc vsftpd: \\(pam\\_unix\\) authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=61.72.48.218",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "vsftp support",
+  "discussion_thread": {
+    "_id": "113ba41c",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nFixed in Subversion repository in 0.7 branch",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 18:35:44",
+        "slug": "571d",
+        "subject": "#19 vsftp support"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 18:35:44",
+        "slug": "17cc",
+        "subject": "#19 vsftp support"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-06 18:35:44",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3292718464f1a1302cd",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/113ba41c/",
+  "ticket_num": 19,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-06-18 15:53:19"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "It would be nice if you could include whois \r\ninformation on the IP in the e-mails that are being \r\nsent out.\r\n\r\n\\[root@myserver log\\]\\# whois 125.1.1.1\r\n\\[Querying whois.arin.net\\]\r\n\\[Redirected to whois.apnic.net\\]\r\n\\[Querying whois.apnic.net\\]\r\n\\[Redirected to whois.nic.or.kr\\]\r\n\\[Querying whois.nic.or.kr\\]\r\n\\[whois.nic.or.kr\\]\r\n\r\n.\r\n.\r\n.\r\n",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "whois information",
+  "discussion_thread": {
+    "_id": "abc510f5",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nThank you.\r\n\r\nA mail-whois.conf has been added to the development branch\r\n\\(trunk\\).",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-08-06 22:18:20",
+        "slug": "f424",
+        "subject": "#20 whois information"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-08-06 22:18:20",
+        "slug": "a2e5",
+        "subject": "#20 whois information"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-08-06 22:18:20",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf32a2718464f1a1302de",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/abc510f5/",
+  "ticket_num": 20,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2006-08-03 04:10:59"
+},{
+  "status": "closed",
+  "reported_by_id": "50f462d0e88f3d7cbd8137ee",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "brianwc",
+  "description": "Spammers attempt to use my mail server to spam and are\r\nrejected. It'd be nice if fail2ban could ban them, but\r\nI'm not sure I understand the iptables syntax well\r\nenough to write my own rules. Fail2ban would monitor\r\n/var/log/mail.log and I see two types of spammers, both\r\nof which could probably be banned based on matching\r\n\"Relay access denied\"\r\n\r\nHere are two examples, one where the IP address is\r\nknown and one where it is \"unknown\" but discernable:\r\n\r\nSep  4 23:04:42 localhost postfix/smtpd\\[9500\\]: connect\r\nfrom c-68-83-249-184.hsd1.pa.comcast.net\\[68.83.249.184\\]\r\nSep  4 23:04:43 localhost postfix/smtpd\\[9500\\]: NOQUEUE:\r\nreject: RCPT from\r\nc-68-83-249-184.hsd1.pa.comcast.net\\[68.83.249.184\\]: 554\r\n&lt;terekhov.mail@mtu-net.ru&gt;: Relay access denied;\r\nfrom=&lt;audv@ru.ru&gt; to=&lt;terekhov.mail@mtu-net.ru&gt;\r\nproto=SMTP helo=&lt;c-68-83-249-184.hsd1.pa.comcast.net&gt;\r\nSep  4 23:04:44 localhost postfix/smtpd\\[9500\\]: NOQUEUE:\r\nreject: RCPT from\r\nc-68-83-249-184.hsd1.pa.comcast.net\\[68.83.249.184\\]: 554\r\n&lt;phcmagazine@mtu-net.ru&gt;: Relay access denied;\r\nfrom=&lt;audv@ru.ru&gt; to=&lt;phcmagazine@mtu-net.ru&gt;\r\nproto=SMTP helo=&lt;c-68-83-249-184.hsd1.pa.comcast.net&gt;\r\nSep  4 23:04:45 localhost postfix/smtpd\\[9500\\]: NOQUEUE:\r\nreject: RCPT from\r\nc-68-83-249-184.hsd1.pa.comcast.net\\[68.83.249.184\\]: 554\r\n&lt;tucha-bigboss@mtu-net.ru&gt;: Relay access denied;\r\nfrom=&lt;audv@ru.ru&gt; to=&lt;tucha-bigboss@mtu-net.ru&gt;\r\nproto=SMTP helo=&lt;c-68-83-249-184.hsd1.pa.comcast.net&gt;\r\n\\[...snip...\\]\r\nSep  4 23:05:01 localhost postfix/smtpd\\[9500\\]: too many\r\nerrors after RCPT from\r\nc-68-83-249-184.hsd1.pa.comcast.net\\[68.83.249.184\\]\r\nSep  4 23:05:01 localhost postfix/smtpd\\[9500\\]:\r\ndisconnect from\r\nc-68-83-249-184.hsd1.pa.comcast.net\\[68.83.249.184\\]\r\n\r\nAND\r\n\r\nSep  4 23:05:29 localhost postfix/smtpd\\[9500\\]: connect\r\nfrom unknown\\[220.70.217.37\\]\r\nSep  4 23:05:31 localhost postfix/smtpd\\[9500\\]: NOQUEUE:\r\nreject: RCPT from unknown\\[220.70.217.37\\]: 554\r\n&lt;terekhov.mail@mtu-net.ru&gt;: Relay access denied;\r\nfrom=&lt;audv@ru.ru&gt; to=&lt;terekhov.mail@mtu-net.ru&gt;\r\nproto=SMTP helo=&lt;\\#\\#.\\#\\#.\\#\\#.\\#\\#&gt;\r\nSep  4 23:05:32 localhost postfix/smtpd\\[9500\\]: NOQUEUE:\r\nreject: RCPT from unknown\\[220.70.217.37\\]: 554\r\n&lt;yakovlex@mtu-net.ru&gt;: Relay access denied;\r\nfrom=&lt;audv@ru.ru&gt; to=&lt;yakovlex@mtu-net.ru&gt; proto=SMTP\r\nhelo=&lt;\\#\\#.\\#\\#.\\#\\#.\\#\\#&gt;\r\nSep  4 23:05:33 localhost postfix/smtpd\\[9500\\]: NOQUEUE:\r\nreject: RCPT from unknown\\[220.70.217.37\\]: 554\r\n&lt;shnurok.rob@mtu-net.ru&gt;: Relay access denied;\r\nfrom=&lt;audv@ru.ru&gt; to=&lt;shnurok.rob@mtu-net.ru&gt;\r\nproto=SMTP helo=&lt;\\#\\#.\\#\\#.\\#\\#.\\#\\#&gt;\r\n\\[...snip...\\]\r\nSep  4 23:05:53 localhost postfix/smtpd\\[9500\\]: too many\r\nerrors after RCPT from unknown\\[220.70.217.37\\]\r\nSep  4 23:05:53 localhost postfix/smtpd\\[9500\\]:\r\ndisconnect from unknown\\[220.70.217.37\\]\r\n\r\nAnyone know exactly what I could put in\r\n/etc/fail2ban.conf to ban spammers like this? Thanks.",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Ban Spammers on Mail Server",
+  "discussion_thread": {
+    "_id": "6a6f8ad4",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=1397687\n\nHello,\r\n\r\nyour request is for postfix log. My request is for qmail log\r\n\\(RBL\\)\r\n\r\nIn my qmail log there are 2 log entry:\r\n\r\n1\\):\r\nSep  6 07:33:33 HOST qmail: 1157520813.485077 rblsmtpd:\r\n211.33.185.247 pid 19597 sbl-xbl.spamhaus.org: 451\r\nhttp://www.spamhaus.org/query/bl?\r\nip=211.33.185.247\r\n\r\n2:\\)\r\n\r\nSep  6 07:18:29 sd6 qmail: 1157519909.633171 qmail-smtpd:\r\n421 badiprbl: ip 200.65.83.30 rbl:\r\n30.83.65.200.combined.njabl.org\r\n\r\n\r\nCan you give me a working failregex please?\r\n\r\nMany thanks",
+        "attachments": [],
+        "author": "derevko",
+        "timestamp": "2006-09-06 09:14:36",
+        "slug": "c142",
+        "subject": "#21 Ban Spammers on Mail Server"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nHi,\r\n\r\nFor Postfix:\r\n\r\nfailregex = reject: RCPT from \\(.\\*\\)\\\\\\[\\(?P&lt;host&gt;\\S\\*\\)\\\\\\]: 554\r\n\r\nFor qmail:\r\n\r\nfailregex = : \\(?:\\[\\d,.\\]+\\[\\d,.\\] rblsmtpd: |421 badiprbl: ip\r\n\\)\\(?P&lt;host&gt;\\S\\*\\)\r\n\r\nThanks to Giuseppe Iuculano for the qmail regex.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:14:58",
+        "slug": "9394",
+        "subject": "#21 Ban Spammers on Mail Server"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-09-06 19:14:58",
+        "slug": "94b6",
+        "subject": "#21 Ban Spammers on Mail Server"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-09-06 19:14:58",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf32b2718464f1a1302ef",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/6a6f8ad4/",
+  "ticket_num": 21,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-09-05 07:04:03"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "It would be helpfull to see also wich logins were tried. Because the its possible to recognise if a user-dictionary attack is going on or an bruto-force on an single user name \\(which ist more dangerous than the first\\)\r\n\r\n1.example: 10 tries on 10 different usernames\r\n2.example: 10 tries on one username \\(schmidt\\)",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Submit also tried user-names on email-notification",
+  "discussion_thread": {
+    "_id": "dc9d7521",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nNew features won't be added to 0.7-0.8 now. This will be discussed when starting 0.9.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-12-03 22:36:02",
+        "slug": "46bf",
+        "subject": "#22 Submit also tried user-names on email-notification"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-12-03 22:36:02",
+        "slug": "3c64",
+        "subject": "#22 Submit also tried user-names on email-notification"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-12-03 22:36:02",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf32d2718464f1a130307",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/dc9d7521/",
+  "ticket_num": 22,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-12-02 09:07:45"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Fail2Ban makes already a good work by warning a admin on receiving failed logins-try notifications and banning IPs. This difficults a hack, but not makes it impossible.\r\n\r\nA possible indication of a successfull hack is a succesfull login from an untrusted host or untrusted network. In this case it would be somthing like a \"last alert\" for the admin that something is maybe wrong. Trusted host/networks are probably in most cases those that already are ignored.\r\n\r\nIn my case, I only login using a passfrase with pub/priv.key \\(ssh\\). If someone successfull logins without it, it would also be an indication.",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Submit accepted logins from untrusted networks",
+  "discussion_thread": {
+    "_id": "153e2b89",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nNew features won't be added to 0.7-0.8 now. This will be discussed when starting 0.9.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-12-03 22:36:21",
+        "slug": "2f56",
+        "subject": "#23 Submit accepted logins from untrusted networks"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-12-03 22:36:21",
+        "slug": "b90a",
+        "subject": "#23 Submit accepted logins from untrusted networks"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-12-03 22:36:21",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf32e2718464f1a130318",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/153e2b89/",
+  "ticket_num": 23,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-12-02 09:32:23"
+},{
+  "status": "open",
+  "reported_by_id": "4e8a1d76b9363c20cf000dcf",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "lostcontrol",
+  "description": "0.6.x has cmdstart/cmdstop which are executed at startup/shutdown.\r\n\r\n0.7.x does not provide this feature.\r\n\r\nIn 0.7.x, jails can be created, started or stopped at any time. Not sure if it make sense to add this to fail2ban-server.",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Add cmdstart/cmdstop",
+  "discussion_thread": {
+    "_id": "fc1367cd",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-12-13 23:17:26",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3302718464f1a130329",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/fc1367cd/",
+  "ticket_num": 24,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-12-13 23:17:26"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "hi,\r\n\r\nthx for the great tool ;\\) and please add the follow date/time foramt\r\n\r\nfail2ban-regex \"2006-12-21 06:43:20 1GxGTY-0000Nm-IM F=any@mail.com H=host-ip.net \\(blabla\\) \\[123.45.67.89\\] P=esmtp temporarily rejected by local\\_scan\\(\\): Please try again later\" \"\\\\\\[&lt;HOST&gt;\\\\\\] .\\*\\(?:rejected by local\\_scan|Unrouteable address\\)\"\r\n\r\nit is used by exim4\r\n\r\nthx\r\n\r\nps: this is my old patten\r\ntimeregex = \\d\\{4\\}-\\d\\{2\\}-\\d\\{2\\} \\d\\{2\\}:\\d\\{2\\}:\\d\\{2\\}\r\ntimepattern = %%Y-%%m-%%d %%H:%%M:%%S\r\n\r\nmEDI",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "no valid date/time found for 2006-12-21 06:43:20",
+  "discussion_thread": {
+    "_id": "0fb63fe3",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nThank you :\\)\r\n\r\n\\- new date/time format added to repository\r\n\\- new filter for Exim4 added to repository\r\n\r\nWill be in the next release.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-12-23 09:52:30",
+        "slug": "b094",
+        "subject": "#25 no valid date/time found for 2006-12-21 06:43:20"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-12-23 09:52:30",
+        "slug": "5633",
+        "subject": "#25 no valid date/time found for 2006-12-21 06:43:20"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2006-12-23 09:52:30",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3302718464f1a130330",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0fb63fe3/",
+  "ticket_num": 25,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-12-21 07:24:26"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "It would be fine if you could ban IPs - which are banned often - permanently or for a longer time.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Ban IPs permanently or for a longer time",
+  "discussion_thread": {
+    "_id": "cdd955eb",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nDuplicate of \\#1229478",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-03 18:25:20",
+        "slug": "9ff3",
+        "subject": "#26 Ban IPs permanently or for a longer time"
+      },
+      {
+        "text": "- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-03 18:25:20",
+        "slug": "cae4",
+        "subject": "#26 Ban IPs permanently or for a longer time"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-01-03 18:25:20",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3322718464f1a130341",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/cdd955eb/",
+  "ticket_num": 26,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2006-12-29 14:30:13"
+},{
+  "status": "open",
+  "reported_by_id": "4cefcb640594ca7d3e000440",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "gerbier",
+  "description": "The command \"fail2ban status &lt;JAIL&gt;\" gives a good summary of current status. \r\n\r\nIs it possible to get the current list of banned IP, with the time it was banned ?",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "get detailed status",
+  "discussion_thread": {
+    "_id": "e9f2478c",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nI applied your patch with some modification. Currently, only the IP list is displayed. More information will be added to the status command in 0.9.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-29 21:53:32",
+        "slug": "2542",
+        "subject": "#27 get detailed status"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-29 21:53:32",
+        "slug": "0eb2",
+        "subject": "#27 get detailed status"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-01-29 21:53:32",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3332718464f1a130352",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/e9f2478c/",
+  "ticket_num": 27,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-01-08 12:35:54"
+},{
+  "status": "open",
+  "reported_by_id": "4cefcb640594ca7d3e000440",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "gerbier",
+  "description": "fail2ban-client is a good tool to get/set fail2ban configuration. \r\nBut I'm looking for a way to remove a banned IP from the daemon internal list : something like\r\nfail2ban-client set &lt;JAIL&gt; unban IP\r\n\r\nthis can be kind, in case of an unwanted banned IP",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "interact with list of banned IP",
+  "discussion_thread": {
+    "_id": "10ae9861",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nAccepted.\r\n\r\nHowever, this will be added to 0.9.\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-29 21:57:44",
+        "slug": "fa4a",
+        "subject": "#28 interact with list of banned IP"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-29 21:57:44",
+        "slug": "6ec2",
+        "subject": "#28 interact with list of banned IP"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=1128943\nOriginator: NO\n\nThe opposite: \\(fail2ban-client set &lt;JAIL&gt; ban IP\\) too would be handy. \r\nI use portscan to check for hackers. For obvious reasons it would be handy if portscan would not modify the iptables directly, but notify fail2ban to block the ip.",
+        "attachments": [],
+        "author": "kohlp",
+        "timestamp": "2007-08-10 10:50:31",
+        "slug": "914f",
+        "subject": "#28 interact with list of banned IP"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-01-29 21:57:44",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3342718464f1a130363",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/10ae9861/",
+  "ticket_num": 28,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-01-08 12:43:59"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hello,\r\n\r\ni have read that it is possible to check the apache-log-files. is there a option where i can use fail2ban to block ip\u00b4s how often \\(10 errors per second\\) produces 404-errors?\r\n\r\nbestr regards\r\ndaniel",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "fail2ban apache 404 errors",
+  "discussion_thread": {
+    "_id": "cc9ca7a5",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=673858\nOriginator: NO\n\nYes, you can, by editing filter operation by yourself,\r\nyou better check out the manual.",
+        "attachments": [],
+        "author": "andcycle",
+        "timestamp": "2007-03-13 15:09:46",
+        "slug": "aee2",
+        "subject": "#29 fail2ban apache 404 errors"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=560940\nOriginator: NO\n\nNot sure of the etiquette here, but I second this one.  Either because of stupidity or exploitation attempts I see a lot of 404's on my server as well.  I have blocked them with apache-noscript but in general one might be able to make it more generic.\r\n\r\nI think the point here is not to ask how to do it, but to get it included in the default package.  More filters makes it easier for people to plug in what they need.",
+        "attachments": [],
+        "author": "khaytsus",
+        "timestamp": "2008-07-12 18:36:09",
+        "slug": "5308",
+        "subject": "#29 fail2ban apache 404 errors"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-02-28 15:06:53",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3372718464f1a13037c",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/cc9ca7a5/",
+  "ticket_num": 29,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2007-02-28 15:06:53"
+},{
+  "status": "open",
+  "reported_by_id": "51acf3382718464f1a130393",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "vanchuck",
+  "description": "My server has been getting attacked for two days now from someone who appears to be connecting from a certain hostname, but that hostname has no IP address:\r\n\r\n\\---- /var/log/syslog:\r\nMar 31 10:28:40 services pure-ftpd: \\(?@customer2-16-172.iplannetworks.net\\) \\[WARNING\\] Authentication failed for user \\[calvin\\]\r\n\r\n\\---- /var/log/fail2ban.log:\r\n2007-03-31 10:29:03,577 fail2ban.filter : WARNING Unable to find a corresponding IP address for customer2-16-172.iplannetworks.net\r\n\r\n\\---- netstat | grep customer2\r\ntcp       13      0 \\#\\#\\#.\\#\\#\\#.\\#\\#\\#.156:ftp       customer2-16-172.:52294 ESTABLISHED\r\ntcp       13      0 \\#\\#\\#.\\#\\#\\#.\\#\\#\\#.158:ftp       customer2-16-172.:52005 ESTABLISHED\r\n\r\n\\---- ping customer2-16-172.iplannetworks.net\r\nping: unknown host customer2-16-172.iplannetworks.net\r\n\r\nThe problem, however, is that fail2ban gets confused by this. Not only can it not ban the person, but after EVERY failed attempt, it tries to ban the person but fails, creating millions of error messages in the fail2ban logs, and working hard enough that an otherwise idle server would have system load increased by &gt;0.5 \\(not a big deal, but it might be if there were 4+ such attackers at one time\\)\r\n\r\nThe only way I've found to get around this is to find out what actual ip address is trying to connect via:\r\n\r\n\\---- netstat -n | grep :21\r\ntcp       11      0 \\#\\#\\#.\\#\\#\\#.\\#\\#\\#.156:21        190.2.16.172:60231      ESTABLISHED\r\ntcp       11      0 \\#\\#\\#.\\#\\#\\#.\\#\\#\\#.158:21     190.2.16.172:60777      ESTABLISHED\r\n\r\nSo now I know their real IP address, and to hack fail2ban into working, I can then manually replace the unknown hostname by this ip address in the log file \\(or manually add an iptables rule myself, if I were brave enough\\)\r\n\r\nI know this is an issue with my system logging the hostname instead of the ip address, but given that fail2ban tends to hammer the server with IP lookups, log processing, and spitting out unreasonable numbers of errors into the logfiles, I'm wondering if there could be some way to mitigate these effects in a future release.\r\n\r\nThanks for the great product though\\!",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Failures with unknown IP addresses",
+  "discussion_thread": {
+    "_id": "8e99dd3c",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nThank you. I will look at this.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-04-01 20:35:42",
+        "slug": "1df6",
+        "subject": "#30 Failures with unknown IP addresses"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-04-01 20:35:42",
+        "slug": "9d2f",
+        "subject": "#30 Failures with unknown IP addresses"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-04-01 20:35:42",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3382718464f1a130392",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/8e99dd3c/",
+  "ticket_num": 30,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-03-31 17:44:07"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hello,\r\n\r\nI want to use fail2ban for PsyBNC but the logfile seems to have a date/time format which is not supported by fail2ban.\r\n\r\nThe date/time format of the PsyBNC logfile looks like:\r\nSat Mar 31 16:21:47\r\n\r\n\r\nWould be nice if you could implement this.\r\n",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "psybnc: no valid date/time found",
+  "discussion_thread": {
+    "_id": "0a14d31a",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nAdded in SVN. Will be in the next release.\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-04-01 20:42:41",
+        "slug": "7d1e",
+        "subject": "#31 psybnc: no valid date/time found"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> closed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-04-01 20:42:41",
+        "slug": "a68e",
+        "subject": "#31 psybnc: no valid date/time found"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-04-01 20:42:41",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf33c2718464f1a1303c1",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0a14d31a/",
+  "ticket_num": 31,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-04-01 15:05:49"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hi,\r\n\r\n\r\non Ubuntu Edgy Fail2Ban apparently only bans login-errors from nonexisting useraccounts but not of existing users.\r\n\r\nExisting users seem to have unlimited tries to log in - or it is an error in the failregex for Ubuntu.\r\n\r\n\r\nfailregex = : \\(?:\\(?:Authentication failure|Failed \\[-/\\w+\\]+\\) for\\(?: \\[iI\\]\\(?:llegal|nvalid\\) user\\)?|\\[Ii\\]\\(?:llegal|nvalid\\) user|ROOT LOGIN REFUSED\\) .\\*\\(?: from|FROM\\) \\(?:::f\\{4,6\\}:\\)?\\(?P&lt;host&gt;\\S\\*\\)\r\n\r\n\r\nThe corresponding log-entry in /var/log/auth.log is:\r\n\r\n\r\n\r\nMay 17 13:45:42 localhost sshd\\[9921\\]: Failed password for username from 123.123.123.123 port 39520 ssh2\r\n\r\n\r\n\r\nSadly, my regex-knowhow isn't quite sufficient to extend the failregex to achieve the desired behaviour.\r\n\r\n\r\nkind regards",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Ban failed login attempts for existing users",
+  "discussion_thread": {
+    "_id": "8396cbc2",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=907142\nOriginator: NO\n\nMost likely a regex problem.  Look for a difference in the log entry if the user exists vs doesn't exist.",
+        "attachments": [],
+        "author": "deathbob",
+        "timestamp": "2007-05-22 15:10:22",
+        "slug": "6b0b",
+        "subject": "#32 Ban failed login attempts for existing users"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-05-18 14:44:26",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf33d2718464f1a1303d2",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/8396cbc2/",
+  "ticket_num": 32,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-05-18 14:44:26"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hi,\r\n\r\nI need to ban IP from the shorewall logs. That's not a problem to get the involved IP with the &lt;HOST&gt; tag in the regex, but I need also to get the port. Would it be possible to have a &lt;PORT&gt; tag, similar to &lt;HOST&gt;, to match it from the log line and send it to the action?\r\n\r\nThanks for this nice software.\r\n\r\njej",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "<PORT> in regex",
+  "discussion_thread": {
+    "_id": "44721001",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=907142\nOriginator: NO\n\nRecomendation: Block all ports.\r\n\r\nAnd what kind of log entries you getting from shorewall that you need the port? If they are attacking ssh, block ssh... shouldnt need very many filters.  Most log entries from shorewall say that it blocked them.",
+        "attachments": [],
+        "author": "deathbob",
+        "timestamp": "2007-05-22 15:13:58",
+        "slug": "9c5b",
+        "subject": "#33 <PORT> in regex"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nHi,\r\n\r\nWhich port do you need? Would be a \"static\" port not enough?\r\n\r\nHowever, 0.9 will include more tags that can be used by actions.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-05-24 20:33:47",
+        "slug": "956b",
+        "subject": "#33 <PORT> in regex"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> pending",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-05-24 20:33:47",
+        "slug": "79fa",
+        "subject": "#33 <PORT> in regex"
+      },
+      {
+        "text": "Logged In: NO \n\nI need to ban a specific port, depending of the attacker. Of course I can ban the whole IP but that's not fairplay... Imagine someone from the same shared IP wants to get acces to port 80, he will be banned as well.\r\n\r\nHere is a sample of log for Shorewall : \r\n\r\nMay 27 01:59:09 MyHostName kernel: Shorewall:net2fw:DROP:IN=eth0 OUT= MAC=00:40:XX...XX:00 SRC=61.26.231.27 DST=X.X.X.X LEN=48 TOS=0x00 PREC=0x00 TTL=111 ID=6324 DF PROTO=TCP SPT=1705 DPT=1722 WINDOW=64240 RES=0x00 SYN URGP=0\r\n\r\nI would like to prevent IP 61.26.231.27 to make incessant connexions to port 1722 \\(he fills my logs :\\)\r\n\r\nA rule could be :\r\nkernel: Shorewall.\\*SRC=&lt;HOST&gt; .\\*DPT=&lt;PORT&gt;\r\n\r\nCheers,\r\njej",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2007-06-01 13:03:02",
+        "slug": "d9aa",
+        "subject": "#33 <PORT> in regex"
+      },
+      {
+        "text": "- **status**: pending --> open",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2007-06-01 13:03:02",
+        "slug": "5385",
+        "subject": "#33 <PORT> in regex"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=907142\nOriginator: NO\n\nAs far as I know, right now you must create a seperate filter for each port and then specify that port in the action.",
+        "attachments": [],
+        "author": "deathbob",
+        "timestamp": "2007-06-01 15:58:05",
+        "slug": "b211",
+        "subject": "#33 <PORT> in regex"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-06-01 13:03:02",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf33e2718464f1a1303df",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/44721001/",
+  "ticket_num": 33,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-05-21 07:58:44"
+},{
+  "status": "closed",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "This is a useful piece of software but decent documentation is desperetly needed.  Like most gnu licensed software the biggest drawback is the lack of documentation.      It is easy to use Fail2Ban if all you want is the basic installation setup, but if you want to do much more you have to spend considerable time doing trial and error on a black box to figure it out.  The software seems to work well enough at this point that documentation is about as high a priority as a new release.\r\n\r\nThere should at least be a comprehensive reference manual from which someone could learn how to really use the software.  If I wanted to volunteer to write a proper user's manual I couldn't because I don't have a really good understanding of how to use the software.\r\n\r\nThe wiki is almost useless in terms of doing anything more than the absolute bare minimum.  For example, what determines the order in which the jails are used to create chains in iptables?  A manual will result in more widespread use of the software and more people with the knowledge to volunteer to help.\r\n",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "need documentation",
+  "discussion_thread": {
+    "_id": "6463f3c0",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nHi,\r\n\r\nI totally agree with you. I try to do my best in this area but I must admit that writing documentation is not really my favorite hobby.\r\n\r\nHowever, I do not share your opinion about the wiki. Personally, I prefer reading documentation on a website than in a console or text editor. I could write a small script that convert the manual on the wiki to a text file which could be included in the package. Or maybe include the wiki page as HTML directly. Any suggestions?\r\n\r\nI will try to improve the documentation with more \"advanced\" topics.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-05-24 21:04:42",
+        "slug": "3b0f",
+        "subject": "#34 need documentation"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> pending",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-05-24 21:04:42",
+        "slug": "a4d8",
+        "subject": "#34 need documentation"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=1312539\nOriginator: NO\n\nThis Tracker item was closed automatically by the system. It was\npreviously set to a Pending status, and the original submitter\ndid not respond within 14 days \\(the time period specified by\nthe administrator of this Tracker\\).",
+        "attachments": [],
+        "author": "sf-robot",
+        "timestamp": "2007-06-08 02:20:23",
+        "slug": "fa39",
+        "subject": "#34 need documentation"
+      },
+      {
+        "text": "- **status**: pending --> closed",
+        "attachments": [],
+        "author": "sf-robot",
+        "timestamp": "2007-06-08 02:20:23",
+        "slug": "a627",
+        "subject": "#34 need documentation"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-06-08 02:20:23",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3442718464f1a130406",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/6463f3c0/",
+  "ticket_num": 34,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-05-24 20:02:12"
+},{
+  "status": "open",
+  "reported_by_id": "5050ec72bfc09e5c4c35a738",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "steeeeeveee",
+  "description": "Would be nice if you could extend sshd.conf with the following entries for failedregex:\r\nUser .\\* from &lt;HOST&gt; not allowed because not listed in \\[aA\\]llow\\[uU\\]sers$\r\nAddress &lt;HOST&gt; maps to .\\* but this does not map back to the address \\\\- POSSIBLE BREAK\\\\-IN ATTEMPT\\\\\\!$\r\n\r\nAnd it would be nice if you could replace this one:\r\n\\[iI\\]\\(?:llegal|nvalid\\) user .\\* from &lt;HOST&gt;$\r\n\r\nWith this one:\r\n\\[iI\\]\\(?:llegal|nvalid\\) user .\\* from &lt;HOST&gt;\\( port \\[0-9\\]\\{1,5\\} ssh\\[12\\]\\{0,1\\}\\)?$\r\n\r\n\r\n// SteveB",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Extend sshd.conf",
+  "discussion_thread": {
+    "_id": "0eb3700c",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-06-12 08:30:45",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3462718464f1a130422",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0eb3700c/",
+  "ticket_num": 35,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-06-12 08:30:45"
+},{
+  "status": "open",
+  "reported_by_id": "514cbf9734309d546f673399",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "corran_horn",
+  "description": "I just noticed that I am getting hit from the same IP across multiple ban.  This could be solved by having an exponential ramp up in ban times for each offense.  You would also need some ability to decrease the ban time \\(perhaps a forgiveness window\\).  It would also be nice to add some randomness to the search window so that an attacker cannot profile the ban and start scanning just under the threshold. ",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Ability to ban for more time for repeat bans",
+  "discussion_thread": {
+    "_id": "2f9240b5",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=148365\nOriginator: NO\n\nGreat idea\\!",
+        "attachments": [],
+        "author": "jwlinux",
+        "timestamp": "2008-06-25 21:26:58",
+        "slug": "46ec",
+        "subject": "#36 Ability to ban for more time for repeat bans"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=49901\nOriginator: NO\n\nI second this\\! As the reporter described, I also see the same IP appearing here already for days now.\r\n\r\nAs for the \"random search window\", there could be an additional keyword next to bantime, like banrange \\(or whatever you want to call it\\). Setting it to \"0\"|\"off\"|\"no\"|\"false\" switches it off, \"auto\"|\"true\" takes e.g. 1/5 of bantime and adds/subtracts a random count of seconds between 0 and this value to/from bantime. Any number other than 0 takes this number as base for the randomize. If banrange &gt; bantime, set it to \"auto\". Just some idea ;\\)",
+        "attachments": [],
+        "author": "izzy",
+        "timestamp": "2008-08-06 14:41:37",
+        "slug": "f925",
+        "subject": "#36 Ability to ban for more time for repeat bans"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=633770\nOriginator: NO\n\nI have the same problem, but I would solve it another way. Why not check the amount of dropped/rejected packets and count the time from the last try? The random change to the unban time is a great idea, but it would be better to set min/avg/max time and use gaussian/poison/whatever distribution to get the result. With this the attacker would usually be banned for some reasonable time but sometimes the time would be really long.",
+        "attachments": [],
+        "author": "osvetlik",
+        "timestamp": "2008-08-16 09:06:24",
+        "slug": "5898",
+        "subject": "#36 Ability to ban for more time for repeat bans"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-08-02 14:34:27",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3472718464f1a130429",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/2f9240b5/",
+  "ticket_num": 36,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-08-02 14:34:27"
+},{
+  "status": "closed",
+  "reported_by_id": "512e6e88271846155ebb53fc",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "dutoit",
+  "description": "Hello,\r\n\r\nI'm running fail2ban on my laptop and powertop \\(a utility that displays what runs most on the box\\), it says that fail2ban-server is working.\r\n\r\nWould it be possible to add a setting to lower how often the server pools \\(assuming that's what it does\\) ?\r\n\r\nX+\r\n\r\nI found a more detailled analysis by Dave :\"\r\n\r\nStracing the process reveals a lot of lines like this:\r\n\r\nselect\\(0, NULL, NULL, NULL, \\{0, 50000\\}\\) = 0 \\(Timeout\\)\r\nfutex\\(0x9320600, FUTEX\\_WAKE, 1\\)         = 0\r\ngettimeofday\\(\\{1185303825, 615120\\}, NULL\\) = 0\r\n\r\nSo it looks like it's basically polling a socket or something with a short timeout \\(50k nanoseconds if I'm reading the strace correct which is basically nothing\\) on the select. I'm not familiar with python so I\r\nhaven't been able to track it down further yet, but a quick check seemed to reveal that any reads on sockets were done with a timeout of 1 second.\r\n\r\nAnyone familiar with python have any other ideas?\r\n\r\n\"",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Add a setting for the polling period (powertop friendly)",
+  "discussion_thread": {
+    "_id": "4df5f726",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nHi Xavier,\r\n\r\nThere is already a fix for this:\r\n\r\nhttp://sourceforge.net/tracker/index.php?func=detail&aid=1769616&group\\_id=121032&atid=689044\r\n\r\nMaybe I should backport this to 0.8. Btw, could you try a nightly snapshot \\[1\\]? However, wait until 3am \\(Europe/Z\u00fcrich\\), I will fix \\[2\\] now ;\\)\r\n\r\n\\[1\\] http://www.fail2ban.org/nightly/fail2ban-trunk.tar.bz2\r\n\\[2\\] http://sourceforge.net/tracker/index.php?func=detail&aid=1829143&group\\_id=121032&atid=689044\r\n",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-11-12 22:43:15",
+        "slug": "6dfe",
+        "subject": "#37 Add a setting for the polling period (powertop friendly)"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol\n- **status**: open --> pending",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-11-12 22:43:15",
+        "slug": "8e39",
+        "subject": "#37 Add a setting for the polling period (powertop friendly)"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=916415\nOriginator: YES\n\nHi Cyril,\r\n\r\nsvn co the trunk. It works \\(haven't tested if it still bans properly\\), and it isn't in the powertop list anymore.\r\n\r\nMany thanks, \r\n\r\nXavier",
+        "attachments": [],
+        "author": "dutoit",
+        "timestamp": "2007-11-13 13:42:57",
+        "slug": "188e",
+        "subject": "#37 Add a setting for the polling period (powertop friendly)"
+      },
+      {
+        "text": "- **status**: pending --> closed",
+        "attachments": [],
+        "author": "dutoit",
+        "timestamp": "2007-11-13 13:42:57",
+        "slug": "c9bb",
+        "subject": "#37 Add a setting for the polling period (powertop friendly)"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2007-11-13 13:42:57",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf34a2718464f1a130447",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/4df5f726/",
+  "ticket_num": 37,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-11-10 06:41:00"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "It would be nice if i could use fail2ban for OpenVZ hardware nodes.\r\n\r\n\r\nIt's actually no problem to monitor more than one logfile. logpath = /vz/private/\\*/var/log/auth.log\\) for example does a good job, as long as all virtual machines have the same timezone.\r\n\r\n\r\nThe better solution for that would be to set up a jail.conf for every virtual machine with the information about the time offset to the master/hardware node.\r\n\r\n\r\nthanks gassi",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "time offset OpenVZ",
+  "discussion_thread": {
+    "_id": "ae923dd5",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-01-07 23:07:31",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf34d2718464f1a130464",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/ae923dd5/",
+  "ticket_num": 38,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-01-07 23:07:31"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "One of the problem that I get into is that when a ssh starts it tries different authentication method publickey, keyboad-interactive\\). All this method increase the \\`\\`TryCount'' for a specific IP. Which is actually a good thing. But what I'd like to have is a \\`\\`ResetWhenSucceed'' option, which will reset the \\`\\`TryCount'' when a connection succeed.\r\n\r\n\r\n\r\nTo be more explicit, let me give you a small scenario:\r\nmaxretry = 2\r\n\r\nsomeone id doing some scp from his machine:\r\nscp foo1.file host\\_with\\_fail2ban:\r\n\\- 1st auth. method publickey failed then\r\nTryCount increase to 1\r\n\\- 2nd auth. method \\(password\\) then TryCount = 1\r\nthen the foo1.file is copied to host\\_with\\_fail2ban:\r\n\r\n\\[\\*\\]\r\n\r\nthen he is doing an other scp\r\nscp foo2.file host\\_with\\_fail2ban:\r\n\\- 1st auth. method \\(publickey\\) then\r\nTryCount increase to 2\r\naaaarrhh TryCount = 2 then your are banned \\!\\!\\!\r\n\r\n\r\n\r\n\\------------------------------\r\n\\[Solution\\]\r\nI've found an ugly workaround:\r\nThis was quite easy since I use tcpwrapper.\r\n\r\nThe idea is to create an other jail witch will ban people who had a successful login \\(Don't forget to put maxretry = 1\\). This Jail will create an /etc/hosts.to\\_unban\r\n\r\nAnd the normal jail, which ban people having too much unsuccessfull login will create the file /etc/hosts.to\\_ban.\r\n\r\nThen I've put in a crontab launched every minute \\(I know that this is slow\\), a script which will create /etc/hosts.deny by doing:\r\nuniq /etc/hosts.to\\_unban | \\\r\ncut -d ' ' -f2 | \\\r\nsed 's/$/$/g;s/^/ /g' | \\\r\ngrep -v -f - /etc/hosts.to\\_ban | \\\r\nuniq &gt; /etc/hosts.deny\r\nwhich remove to ban successfull ip adress\r\n\r\n\r\nCed.\r\nP.-S.Excellent Job this fail2ban",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "ssh: reset counter when success login happen",
+  "discussion_thread": {
+    "_id": "e8d413c0",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-01-17 07:27:57",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf34d2718464f1a13046b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/e8d413c0/",
+  "ticket_num": 39,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-01-17 07:27:57"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hello,\r\n\r\ni need a filter for an error \r\n\r\nTCP: Treason uncloaked\\!\r\n\r\nThank you for help\\!",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Filter for log message TCP: Treason uncloaked!",
+  "discussion_thread": {
+    "_id": "8612c455",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-02-06 22:54:01",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf34e2718464f1a130472",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/8612c455/",
+  "ticket_num": 40,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2008-02-06 22:54:01"
+},{
+  "status": "open",
+  "reported_by_id": "50c8eb865fcbc9098bbb7e16",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "mventimi",
+  "description": "I have set up fail2ban on my system to permanently ban IP addresses in iptables that get caught. Basically, I have a ban action and no unban action, with a -1 bantime. This all works great, except that fail2ban rescans all of the logs on startup and rebans any of the addresses that it finds. I worked around this by putting a conditional in the ban command, but it would be cleaner if there were an option to prevent this startup scan from occurring.\r\n\r\nBy the way, kudos to the team on an excellent tool\\!",
+  "labels": [],
+  "assigned_to": "lostcontrol",
+  "assigned_to_id": "4e8a1d76b9363c20cf000dcf",
+  "private": false,
+  "summary": "Option to prevent rescan of logs on startup",
+  "discussion_thread": {
+    "_id": "373fed08",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nVersions starting from 0.9 will not read the whole file at startup anymore. I will probably improve startup/restart a bit too \\(persist current ban list to disk, etc\\).\r\n\r\nThank you for using fail2ban ;\\)",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2008-05-12 09:26:28",
+        "slug": "29ee",
+        "subject": "#41 Option to prevent rescan of logs on startup"
+      },
+      {
+        "text": "- **assigned_to**: nobody --> lostcontrol",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2008-05-12 09:26:28",
+        "slug": "a33a",
+        "subject": "#41 Option to prevent rescan of logs on startup"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-05-12 09:26:28",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf34e2718464f1a130479",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/373fed08/",
+  "ticket_num": 41,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-02-23 20:12:08"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Please support banning of entire countries via geoiplookup.\r\n\r\nMany attacks originate from China and countries alike. My website has no intended audience whatsoever in such a country and I would like to ban all IP traffic from a certain country. Adding countries to /etc/hosts.deny will only block a small part of that traffic since most connections are based on IP address only, not on domain names.\r\n\r\nFail2ban can be extended to block failed attempts \\(or even any attempt\\) to login from a specified list of countries.\r\n\r\nWith the increase of attacks from countries that are totally outside of the range of the intended audience, this feature would increase security enormously.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Banning of entire countries via geoiplookup",
+  "discussion_thread": {
+    "_id": "3c411e9f",
+    "posts": [
+      {
+        "text": "Logged In: NO \n\nFor sure that this would increase safety on servers. Please, implement this feature.",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2008-05-16 13:37:09",
+        "slug": "f317",
+        "subject": "#42 Banning of entire countries via geoiplookup"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=148365\nOriginator: NO\n\nI also vote for this feature.",
+        "attachments": [],
+        "author": "jwlinux",
+        "timestamp": "2008-06-25 21:26:17",
+        "slug": "03d9",
+        "subject": "#42 Banning of entire countries via geoiplookup"
+      },
+      {
+        "text": "me vote too\\!\\! This will be a great addon\\!",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2009-05-23 10:28:20",
+        "slug": "3359",
+        "subject": "#42 Banning of entire countries via geoiplookup"
+      },
+      {
+        "text": "Uh, I don't actually think that this is something for fail2ban. fail2ban is designed to ban specific IP's when they generate failed login attempts. If you just want to statically ban a range of addresses, you should add such a rule to your regular firewall. I'm not so sure how this geoiplookup thing works, it might not give you one big range of addresses for each country, but can only do a lookup of IP -&gt; country.\n\nThus, before each connection attempt, you should do a lookup and decide wether or not to allow this IP on that. This doesn't fit fail2ban either, since fail2ban only does banning after a login attempt, based on log files.\n\nI'm not a fail2ban developer, but I would recommend closing this feature request as not appropriate for fail2ban.",
+        "attachments": [],
+        "author": "bigfoot_hunter",
+        "timestamp": "2009-09-10 09:22:42",
+        "slug": "68b0",
+        "subject": "#42 Banning of entire countries via geoiplookup"
+      },
+      {
+        "text": "Agreed. For such purposes other tools should be used instead.\n\nIn my case I have a deamon called chinaspam running \\(search for chinaspam geoip\\). It may be a bit old and not fully working under newer 64 bit kernels but it comes as source code only anyway, and it should be easy to fix the issues.\n",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2009-12-28 12:09:44",
+        "slug": "4029",
+        "subject": "#42 Banning of entire countries via geoiplookup"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-05-08 16:10:57",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3502718464f1a13048a",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/3c411e9f/",
+  "ticket_num": 42,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-05-08 16:10:57"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hi \\!\r\n\r\nI recently see more and more try from dfind/w00tw00t apache vulnerability scanner in the apache logs.\r\n\r\nMaybe be it will be useful to add a filter to block them in the defaults filter list.\r\n\r\nSe this proposer one for example :\r\nhttp://howflow.com/tricks/block\\_w00tw00t\\_scan\\_hosts\\_with\\_fail2ban",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "add an apache-w00tw00t filter file",
+  "discussion_thread": {
+    "_id": "6fed4d08",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-05-23 14:10:02",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3522718464f1a1304ad",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/6fed4d08/",
+  "ticket_num": 43,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-05-23 14:10:02"
+},{
+  "status": "open",
+  "reported_by_id": "51acf3532718464f1a1304b5",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "stevejede",
+  "description": "Hi,...\r\n\r\nsince ipv6 becomes more and more popular, i suggest it's time for finally implementing it. I would appreciated it very much\\! \\(i use ipv6\\)\r\n\r\nIf you want to implement it, feel free to contact me for heavy testing.\r\n\r\nbest regards",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "support for ipv6/ip6tables",
+  "discussion_thread": {
+    "_id": "cb777e7d",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-06-21 00:42:33",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3532718464f1a1304b4",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/cb777e7d/",
+  "ticket_num": 44,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-06-21 00:42:33"
+},{
+  "status": "open",
+  "reported_by_id": "4c91227cb9363c77b3000034",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "khaytsus",
+  "description": "I find on my server which previously had ikonboard on it a great number of idiots are attempting to load ikonboard.cgi 400+ times in a row.  I suspect there is some sort of exploit against it, but regardless it's the same match as the rest of apache-noscript but there is currently no .cgi extension.  It's easy to add of course, so I have done that, but suggesting it be added to the default apache-noscript config.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Add cgi extension for apache-noscript",
+  "discussion_thread": {
+    "_id": "0695a48b",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-07-12 18:33:18",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3562718464f1a1304d9",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0695a48b/",
+  "ticket_num": 45,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-07-12 18:33:18"
+},{
+  "status": "open",
+  "reported_by_id": "50d1572ce88f3d0bf0faed77",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "amg1127",
+  "description": "In my setup, I use fail2ban for monitoring a linux-based firewall system. I need to log either allowed and denied connections, so the log file that fail2ban parses has a size of about 1.3GB. I rotate that log file every day; the size can't be lesser than 1GB.\r\n\r\nWhen fail2ban starts, it parses the log file from the beginning. This task takes several minutes to complete. Until the parse finishes, fail2ban doesn't recognize additions of matching entries at the end of file and may allow more authentication attempts from an attacker.\r\n\r\nIn this particular case, I don't need fail2ban parses that log file from the beginning. So I wish to suggest an option in \"jail.local\" for controlling this behavior. Maybe an option \"parse from the beginning yes/no\" or an integer option specifying a size limit so that log files bigger than that will be skipped to the end.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Faster startup by skipping existing lines in log files",
+  "discussion_thread": {
+    "_id": "4c9d1db2",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-09-03 16:21:27",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3572718464f1a1304e0",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/4c9d1db2/",
+  "ticket_num": 46,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-09-03 16:21:27"
+},{
+  "status": "open",
+  "reported_by_id": "50d1572ce88f3d0bf0faed77",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "amg1127",
+  "description": "Fail2ban 0.8.3 forget banned IPs if log files are rotated while Fail2ban is not running. As a result, access from banned IPs can be restored before bantime expires.\r\n\r\nWhen Fail2ban bans a host, it should save in a file the time and the address of the event and it should parse that file during the startup. By doing this check, Fail2ban can ban the problematic host even if system goes rebooted and log files gets rotated during shutdown sequence.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Banned IP data should be saved by Fail2Ban",
+  "discussion_thread": {
+    "_id": "8838d2d5",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-10-16 23:57:59",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3582718464f1a1304e7",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/8838d2d5/",
+  "ticket_num": 47,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-10-16 23:57:59"
+},{
+  "status": "open",
+  "reported_by_id": "5120cfdfe88f3d0a63b8a4fe",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "resmo",
+  "description": "Many bots trying to attack SSH by Bruteforce. Therefore is would be nice to be able to lookup ip in DNSBL.\r\n\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Possibility to use DNSBL",
+  "discussion_thread": {
+    "_id": "c4397e42",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2008-12-05 13:09:46",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3582718464f1a1304ee",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/c4397e42/",
+  "ticket_num": 48,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-12-05 13:09:46"
+},{
+  "status": "open",
+  "reported_by_id": "50734767bfc09e40d892d407",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "heishiro",
+  "description": "Yesterday was the first time i ever used this program, and the idea it's excellent, but, trying to develop the program for another services \\(for example a mail server called mercury/32\\) didn't work due to the timestamps in the log.\r\n\r\nI think a great idea would be to add an external file, let's say timestamps.conf that could define several timestamps\r\n\r\n\\[mytimestamp\\]\r\nE YYYYMMDD HHMMSS\r\n\r\nAnd maybe the user could reference the timestamp in the jail.conf file.\r\n\r\n\\[jailx\\]\r\ntimestamp=mytimestamp\r\n...\r\n\r\nSo that way, anyone could adapt the program to the log file they need.\r\n\r\nIn my case, the log file has an entry like this:\r\n\r\nE 20090524 151631 4a1960fe Host xx.xx.xx.xx blocked by SpamHaus - dropped and blocked.\r\n\r\nThe mailserver bans the ip, but for a short time, and only blocks the entry to the mailserver itself, not the rest of the services... So i wanted to ban the ip for x days just for appearing in spamhaus and trying to get into my server, but fail2ban has no way to adapt the regex in order to recognize the timestamp. I guess there are hundreds of cases where this would happen.\r\n\r\nAnother thing is that i'm not sure if the program is still being developed. I'll find out soon enough.\r\n\r\nThanks a lot for creating this program, the idea behind it deserves recognition.\r\n\r\nHeishiro.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Timestamps not customizable is a minus...",
+  "discussion_thread": {
+    "_id": "bb9c61ed",
+    "posts": [
+      {
+        "text": "I modified the program in my server, and added the following to the datedetector.py\r\n\\# Mercury/32\r\ntemplate = DateStrptime\\(\\)\r\ntemplate.setName\\(\"E Year/Month/Day Hour:Minute:Second\"\\)\r\ntemplate.setRegex\\(\"E \\d\\{4\\}\\d\\{2\\}\\d\\{2\\} \\d\\{2\\}\\d\\{2\\}\\d\\{2\\}\"\\)\r\ntemplate.setPattern\\(\"E %Y%m%d %H%M%S\"\\)\r\nself.\\_\\_templates.append\\(template\\)\r\n\r\nAfter that, i restarted the service and voil\u00e0... It worked perfectly... Hope this helps anyone who wants to ban ips that are initially detected in Mercury/32.\r\n\r\nAnyway, the feature request seems to me like it's still open.\r\n\r\nThanks a lot for the program again.",
+        "attachments": [],
+        "author": "heishiro",
+        "timestamp": "2009-05-24 23:00:33",
+        "slug": "24b2",
+        "subject": "#49 Timestamps not customizable is a minus..."
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2009-05-24 22:01:48",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3592718464f1a1304f5",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/bb9c61ed/",
+  "ticket_num": 49,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-05-24 22:01:48"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hello,\r\nthank you for the great fail2ban. I use it for ssh and i would use it for qmail multilog, but there is no \"fail\"-entry. \r\n\r\nmy log:\r\n\\-------\r\nif user ok:\r\ntcpserver: status: 1/40\r\ntcpserver: pid 29129 from 210.19.218.054\r\ntcpserver: ok 29129 0:85.213.57.59:110 :210.19.218.054::57679\r\nqmail-pop3d: user xxxxxxxx logged in from 210.19.218.054:57679\r\ntcpserver: end 29129 status 256\r\ntcpserver: status: 0/40\r\n\r\nif bad user:\r\ntcpserver: status: 1/40\r\ntcpserver: pid 29137 from 210.19.218.054\r\ntcpserver: ok 29137 0:83.243.57.69:110 :210.19.218.054::57719\r\ntcpserver: end 29137 status 256\r\ntcpserver: status: 0/40\r\n\r\nMy suggestion is to use failt2ban and: \r\nif to match on \"failregex\" \r\n\\(e.g.: tcpserver: ok\\)\r\nthen add \"+1\" to ip-counter \\(210.19.218.054\\) and \r\nif to match on \"ignoreregex \\(or namd you like\\)\" \\(e.g.: logged in from\\) then subtract \"-1\" from ip-counter.\r\n\r\nIs this possible? It will be very helpful for us.\r\nbest regards from germany\r\n\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "suggestion",
+  "discussion_thread": {
+    "_id": "53dafabf",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2009-07-28 11:50:36",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3592718464f1a130504",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/53dafabf/",
+  "ticket_num": 50,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2009-07-28 11:50:36"
+},{
+  "status": "open",
+  "reported_by_id": "5042317071b75b1e688a0a8e",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "bigfoot_hunter",
+  "description": "Currently, the default iptables-\\* actions of fail2ban always add a rule to the INPUT chain. This rule jumps to the relevant fail2ban chain which contains the actual bans, so not everything ends up in the INPUT chain, but the main entrypoint for fail2ban does.\r\n\r\nThis conflicts with my firewall, vuurmuur \\(and will probably conflict with others as well, see Debian \\#515599\\). When vuurmuur restarts, it flushes the INPUT chain, removing the fail2ban rule as well. I could fix this by restarting fail2ban as well, but I was hoping for a slightly more elegant solution.\r\n\r\nVuurmuur exposes a number of \"hooking\" chains, which are empty user defined chains which are called by Vuurmuur, but their contents are never touched. In this case, I'm interested in the PRE-VRMR-INPUT chain, which is called by Vuurmuur at the start of the INPUT chain, before any rules are processed. To make fail2ban play nicely with Vuurmuur, it should just add its rules to this chain.\r\n\r\nSo, for the actual feature request: I would like to have some easier way to change the chain that fail2ban operates on. Currently, I have to copy the iptables action I'm using and change the chain in there. Making this configurable in the default iptables-\\*.conf actions would be preferable.\r\n\r\nFor this to work, a few changes would be needed. First, every action.d/iptables\\*.conf file needs to add the following line to their \\[Init\\] section:\r\n\r\n\\# Option:  chain\r\n\\# Notes    specifies the iptables chain to which the fail2ban rules\r\n\\# should be  \r\n\\#          added\r\n\\# Values:  STRING  Default: INPUT                                              \r\nchain = INPUT\r\n\r\nFurthermore, all occurences of \"INPUT\" should be replaced with\r\n\"&lt;chain&gt;\".\r\n\r\nNow, we can change the chain used for any service by changing the\r\ncorresponding action= line in jail.conf. This is still not entirely\r\nconvenient, so it might be even better to use the approach that the\r\nDebian package takes by defining a action\\_ variable that interpolates\r\nthe needed variables.\r\n\r\nI've tried this approach for just the iptables.conf action and it works,\r\nbut I don't have time for providing a full patch.\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Make the INPUT chain configurable",
+  "discussion_thread": {
+    "_id": "c39a159d",
+    "posts": [
+      {
+        "text": "To see how I implemented this, see the following patch: http://git.stderr.nl/gitweb?p=servers.git;a=commitdiff;h=2f8315532658e5ad1acea72b357a5dc4878a4a93;hp=a31720f9f2b8f7e92d5e265bbe728e2756a7b7f6\r\n\r\nIt only changes iptables-multiport and requires the Debian jail.conf with two other changes \\(before this one in the same repository\\), but it serves well to illustrate my point.",
+        "attachments": [],
+        "author": "bigfoot_hunter",
+        "timestamp": "2009-09-10 11:24:22",
+        "slug": "bdc4",
+        "subject": "#51 Make the INPUT chain configurable"
+      },
+      {
+        "text": "Alternative way is to use \\[INCLUDES\\] and define\ncommon.conf \\(.local\\) under actions.d \\(now we have only under\nfilters.d\\) which would define smth like\n\n\\[INCLUDES\\]\n\n\\# Load customizations if any available\nafter = common.local\n\n\n\\[DEFAULT\\]\n\n\\_hook\\_chain = INPUT\n\n\nand then in iptables-\\* actions to actually include common.conf\n\n\\[INCLUDES\\]\n\n\\# Load customizations if any available\nafter = common.conf\n\nand then instead of\n\n-I INPUT\n\nuse\n\n-I %\\(\\_hook\\_chain\\)s\n",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2009-09-10 13:24:44",
+        "slug": "aa12",
+        "subject": "#51 Make the INPUT chain configurable"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2009-09-10 10:10:41",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf35a2718464f1a13050b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/c39a159d/",
+  "ticket_num": 51,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-09-10 10:10:41"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Hi,\r\nI am using fail2ban for about some month and did get much mails on ssh attacks.\r\nTherefor I wrote a script to send an abuse mail to the IP owner, greping from the ripe email fail2ban provides on ban.\r\n\r\non first step the scipt greps for an abuse email address,\r\nif not found greps for other provider emails.\r\n\r\nI did use a mailbox for receiving emails and an other for reply to.\r\nThe email send also an output of /var/log/messages concerning the blocked IP. \r\n\r\nCould please prove If you could add this feater in on of the next fail2ban releases?\r\n\r\nI am running the script by an hourly cronjob.\r\n\r\nthe script is attached.\r\n\r\nI am using fail2ban\r\nrpm -q fail2ban\r\nfail2ban-0.8.4-0.pm.1.1\r\ninstalled by rpm on openSUSE 11.0\r\n\r\n\r\nBest Regards\r\n\r\nAndrej Semen\r\n",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "sending abuse email to IP owner of Banned IP",
+  "discussion_thread": {
+    "_id": "16d63ef2",
+    "posts": [
+      {
+        "text": "scipt for sending abuse email to IP owner of Banned IP",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/16d63ef2/1daf/attachment/abuse-mail_example.sh",
+            "bytes": 1202
+          }
+        ],
+        "author": "*anonymous",
+        "timestamp": "2009-12-10 10:25:11",
+        "slug": "1daf",
+        "subject": "#52 sending abuse email to IP owner of Banned IP"
+      },
+      {
+        "text": "- **milestone**:  --> Next Release (example)",
+        "attachments": [],
+        "author": "*anonymous",
+        "timestamp": "2009-12-10 15:14:47",
+        "slug": "cd0a",
+        "subject": "#52 sending abuse email to IP owner of Banned IP"
+      },
+      {
+        "text": "did some bug fix an improvement to fix.\r\nHere the latest script running on my server by cron every hour.\r\n\r\n\\#\\!/bin/bash\r\n\\#\\# Andrej Semen\r\n\\#\\# mail@semen.de\r\n\\#\\# send email to provider of IP\r\n\\#\\# which customer attacks server\r\n\\#\\#\r\n\r\nDIR=/var/spool/mail/mail2/new\r\nDCUR=/var/spool/mail/mail2/cur\r\nLOG1=/var/log/messages\r\nFMAIL=mail2@example.de\r\n\r\ncd $DIR\r\n\r\nfor i in \\`ls $DIR\\`\r\ndo\r\necho \" i is = $i ----------------\"\r\n\\#\\# check if mail is stop/start email from fail2ban \\#\\#\r\nBAN=\\`grep Subject: $DIR/$i | awk '\\{print $4\\}'\\`\r\necho $BAN\r\nif \\[ $BAN == \"banned\" \\]\r\nthen\r\n\r\n\\#ab1=\\`grep abuse@ $DIR/$i | awk '\\{print $3\\}'\\`\r\nab1=\\`grep abuse@ $DIR/$i | grep -E -o \\[\\[:alnum:\\]\\]+@\\[\\[:alnum:\\]\\]+\\\\.\\[\\[:alnum:\\]\\]+\\\\.\\[\\[:alnum:\\]\\]+\\`\r\necho \"ab1 is = $ab1\"\r\nif \\[ -z $ab1 \\]\r\nthen ab1=\\`grep -i e-mail: $i | awk '\\{print $2\\}'\\`\r\necho \"run2 ab1 is = $ab1\"\r\nelse\r\necho \"found abuse mail\"\r\nfi\r\n\r\n\\#\\# IP of attacker\r\nIPa=\\`grep Subject $DIR/$i | awk '\\{print $5\\}'\\`\r\nDAT=\\`/bin/date\\`\r\necho \"IP $IPa Datum $DAT\"\r\ngrep\\_log=\\`/usr/bin/grep $IPa $LOG1\\`\r\nTEXT=\"Looks like your custommer with IP $IPa is doing ssh attacks to my server. \\n Please take care about \\n  Best Regards \\n \\n here some logfile output D\r\nate \\n $DAT \\n $grep\\_log\"\r\nif \\[ -z $ab1 \\]\r\nthen echo \" no email \"\r\nelse\r\necho \" mail will be send to $ab1\"\r\necho -e \"$TEXT\" | /usr/bin/mail -s \"ssh attacks from your customer with IP $IPa\" -r $FMAIL $ab1\r\nfi\r\n\r\nelse\r\necho -e \"Not a banned email it is a $BAN email /n\"\r\nfi\r\n\\#\\#\\# move mails to cur dir \\#\\#\r\necho \"mv $DIR/$i $DCUR/\"\r\nmv $DIR/$i $DCUR/\r\n\r\necho \"+++++++++++++++++++++++++++\"\r\n\r\n\r\ndone\r\n",
+        "attachments": [],
+        "author": "*anonymous",
+        "timestamp": "2009-12-10 15:19:16",
+        "slug": "270c",
+        "subject": "#52 sending abuse email to IP owner of Banned IP"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2009-12-10 15:14:47",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf35c2718464f1a13051e",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/16d63ef2/",
+  "ticket_num": 52,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2009-12-10 10:25:11"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "As far as I have used fail2ban it doesn't support ignorecase in the failregex option in the filters.\r\n\r\nIt would be great to have a config option like \"IGNORECASE = 1\" to select if we want all our failregex to be case-sensitive or insensitive.\r\n\r\nI have changed the file server/failregex.py:\r\n\r\ndiff failregex.py /usr/local/src/fail2ban-0.8.4/server/failregex.py\r\n51c51\r\n&lt;                       self.\\_regexObj = re.compile\\(regex, re.IGNORECASE\\)\r\n\\---\r\n&gt;                       self.\\_regexObj = re.compile\\(regex\\)\r\n\r\nI'll try to make a patch with the option to make this feature, ",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Case-insensitive in the regexp",
+  "discussion_thread": {
+    "_id": "afec9d30",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2009-12-17 12:06:49",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf35d2718464f1a130539",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/afec9d30/",
+  "ticket_num": 53,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-12-17 12:06:49"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "I have many servers with F2B, but no one have a statisc system.\r\nWe want put all banned IP for day into a table to make the graphs.\r\n\r\nThanks",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Save banned IPs into MySQL",
+  "discussion_thread": {
+    "_id": "35c59c76",
+    "posts": [
+      {
+        "text": "You can get IPs from firewall at any time and make any graphs.",
+        "attachments": [],
+        "author": "vlader2010",
+        "timestamp": "2010-05-26 20:06:19",
+        "slug": "8b7c",
+        "subject": "#54 Save banned IPs into MySQL"
+      },
+      {
+        "text": "Checkout: http://sourceforge.net/projects/fail2sql/",
+        "attachments": [],
+        "author": "*anonymous",
+        "timestamp": "2011-08-08 12:20:24",
+        "slug": "6eac",
+        "subject": "#54 Save banned IPs into MySQL"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2010-04-18 13:09:14",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf35e2718464f1a130540",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/35c59c76/",
+  "ticket_num": 54,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2010-04-18 13:09:14"
+},{
+  "status": "open",
+  "reported_by_id": "51acf3602718464f1a130555",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "teelevision",
+  "description": "In some logfiles they use a time format that is the unix timestamp in hex.\r\n4c97003e would be the timestamp 1284964414 \\(=2010-09-20 06:33:34\\)\r\nThey use it for example in a Teeworlds server log.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Adding new time format",
+  "discussion_thread": {
+    "_id": "5c68f19a",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2010-09-20 11:48:02",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3602718464f1a130554",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/5c68f19a/",
+  "ticket_num": 55,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2010-09-20 11:48:02"
+},{
+  "status": "open",
+  "reported_by_id": "4fd9aebdb9363c12100000ba",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "oobayly",
+  "description": "I've added support for MySQL's general log file, the following changes have to be made:\r\n1\\) . Patch server/datedetector.py to add support for the date format\r\n2\\). Add MySQL filter.\r\n\r\nI've attached to files, so hopefully this can be added in the next release.\r\n\r\nJohn",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "MySQL support",
+  "discussion_thread": {
+    "_id": "0100fb8b",
+    "posts": [
+      {
+        "text": "Patch to add MySQL support",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/0100fb8b/63e1/attachment/datedetector.py.diff",
+            "bytes": 622
+          }
+        ],
+        "author": "oobayly",
+        "timestamp": "2010-10-07 11:59:52",
+        "slug": "63e1",
+        "subject": "#56 MySQL support"
+      },
+      {
+        "text": "MySQL filter",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/0100fb8b/26d8/attachment/mysql.conf",
+            "bytes": 668
+          }
+        ],
+        "author": "oobayly",
+        "timestamp": "2010-10-07 12:00:19",
+        "slug": "26d8",
+        "subject": "#56 MySQL support"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2010-10-07 11:59:51",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3632718464f1a130579",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0100fb8b/",
+  "ticket_num": 56,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2010-10-07 11:59:51"
+},{
+  "status": "open",
+  "reported_by_id": "51acf3652718464f1a130594",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "snog",
+  "description": "If possible, add the ability to ban an ip using the filter.conf files.\r\n\r\nThis would ensure that manually banned IPs stay that way on re-start.",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "BanIP Improvement",
+  "discussion_thread": {
+    "_id": "3e31f5ec",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2010-10-19 16:27:19",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3652718464f1a130593",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/3e31f5ec/",
+  "ticket_num": 57,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2010-10-19 16:27:19"
+},{
+  "status": "open",
+  "reported_by_id": "51acf3682718464f1a1305b9",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "maestrx",
+  "description": "Notification option to jabber account. Requirement is xmpppy module. Example of jail.conf content: jabber\\[name=SSHD, dest=vitek@jabber.safar.info, host=pigbox\\] ",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Jabber acton",
+  "discussion_thread": {
+    "_id": "a4cb81cf",
+    "posts": [
+      {
+        "text": "jabber action file",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/a4cb81cf/07ed/attachment/jabber.conf",
+            "bytes": 1660
+          }
+        ],
+        "author": "maestrx",
+        "timestamp": "2010-12-05 18:32:13",
+        "slug": "07ed",
+        "subject": "#58 Jabber acton"
+      },
+      {
+        "text": "python script taking care of message sending",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/a4cb81cf/d834/attachment/notify_by_jabber",
+            "bytes": 720
+          }
+        ],
+        "author": "maestrx",
+        "timestamp": "2010-12-05 18:33:04",
+        "slug": "d834",
+        "subject": "#58 Jabber acton"
+      },
+      {
+        "text": "- **labels**:  --> Interface Improvements (example)",
+        "attachments": [],
+        "author": "maestrx",
+        "timestamp": "2010-12-05 18:34:30",
+        "slug": "bd8e",
+        "subject": "#58 Jabber acton"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2010-12-05 18:34:30",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3682718464f1a1305b8",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/a4cb81cf/",
+  "ticket_num": 58,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2010-12-05 18:32:13"
+},{
+  "status": "open",
+  "reported_by_id": "51acf36b2718464f1a1305f7",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "hiscockssd",
+  "description": "I'd like to be able to set the group read permissions for the log file. \r\n\r\nAttached is a patch from 0.8.4 that I'm currently using successfully. It allows changes of the log target permissions ,if target is a file, from both fail2ban.conf and fail2ban-client.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Change log group permissions",
+  "discussion_thread": {
+    "_id": "c8d77fdb",
+    "posts": [
+      {
+        "text": "Group logging perm patch",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/c8d77fdb/acc0/attachment/fail2ban_diff",
+            "bytes": 5857
+          }
+        ],
+        "author": "hiscockssd",
+        "timestamp": "2011-03-12 18:49:19",
+        "slug": "acc0",
+        "subject": "#59 Change log group permissions"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2011-03-12 18:49:19",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf36b2718464f1a1305f6",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/c8d77fdb/",
+  "ticket_num": 59,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-03-12 18:49:19"
+},{
+  "status": "open",
+  "reported_by_id": "4fd85b760594ca3f8e0001fb",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "natureshadow",
+  "description": "I am currently using Fail2Ban mails to automatically fiel abuse complaints. For that, it would be great if Fail2Ban could generate special mail headers in mail it sends out, like:\r\n\r\nX-Fail2Ban-Reporting-Host: foo.bar.de\r\nX-Fail2Ban-Banned-Host: malory.example.org\r\nX-Fail2Ban-Banned-IP: 127.0.0.1\r\n...",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Mail headers",
+  "discussion_thread": {
+    "_id": "c36c21e8",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2011-03-26 20:51:18",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf36e2718464f1a130626",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/c36c21e8/",
+  "ticket_num": 60,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-03-26 20:51:18"
+},{
+  "status": "open",
+  "reported_by_id": "4cefcb640594ca7d3e000440",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "gerbier",
+  "description": "I have installed fail2ban on several servers, and when I receive an alert by mail, I have to look to check the source to know where the problem comes.\r\n\r\nIs it possible to add in subject the name of the sending server. for example instead of \"\\[Fail2Ban\\] SSH: banned 137.xxx.xxx.xxx\", have something like\r\n\"\\[Fail2Ban\\] SSH on yyy.yyy.yyy.yyy: banned 137.xxx.xxx.xxx\", with a new tag",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "add host name in action",
+  "discussion_thread": {
+    "_id": "ff0b57d6",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2011-04-27 11:24:16",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf36e2718464f1a13062d",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/ff0b57d6/",
+  "ticket_num": 61,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-04-27 11:24:16"
+},{
+  "status": "open",
+  "reported_by_id": "50ffdd5c34309d12c204e35e",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "aberrio",
+  "description": "Hello,\r\n\r\nI am running version 0.8.0.4 working with outs issues but suddenly\r\nfail2ban stop working.  I tried to test as follow\r\n\r\n&gt; fail2ban-regex /var/log/messages /etc/fail2ban/filter.d/pure-ftpd.conf\r\n\r\nAn getting the following error\r\n\r\n&gt; fail2ban-regex /var/log/messages /etc/fail2ban/filter.d/pure-ftpd.conf\r\n'''/usr/share/fail2ban/server/filter.py:442: DeprecationWarning: the md5\r\nmodule is deprecated; use hashlib instead\r\nimport md5'''\r\n\r\nTHis happen on all my servers.\r\n\r\nPlese advise,\r\n\r\nKind regards,\r\n\r\nAl\r\n",
+  "labels": [
+    "Interface Improvements (example)"
+  ],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "MD5 error",
+  "discussion_thread": {
+    "_id": "b8b47caa",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2011-05-02 18:59:14",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf36f2718464f1a130634",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/b8b47caa/",
+  "ticket_num": 62,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-05-02 18:59:14"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Instead of just banning the user with no notification, direct them to a webpage that explains the ban and how to get unbanned. ",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Display a webpage to banned users. ",
+  "discussion_thread": {
+    "_id": "d0e8cdf2",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2011-08-08 12:23:04",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3702718464f1a13063b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/d0e8cdf2/",
+  "ticket_num": 63,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-08-08 12:23:04"
+},{
+  "status": "open",
+  "reported_by_id": "51acf3712718464f1a130643",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "magicrhesus",
+  "description": "Could you add support for asterisk in fail2ban ?\r\nIf you need more informations, I can provide them.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Asterisk support",
+  "discussion_thread": {
+    "_id": "6d9c8734",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2011-08-31 13:18:58",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3712718464f1a130642",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/6d9c8734/",
+  "ticket_num": 64,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-08-31 13:18:58"
+},{
+  "status": "open",
+  "reported_by_id": "4f5a4ce2b9363c57180007c6",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "shrek-m",
+  "description": "see  https://bugzilla.redhat.com/show\\_bug.cgi?id=800694\r\n\\[RFEs\\] A - IPv6 support, B - blocklist.de, C - autofwd\r\n\\--------\r\n\r\nit would be great if you could provide a update or a new release with ipv6 support before the world ipv6 launch day 2012-06-06\r\nhttp://www.worldipv6launch.org/\r\n\r\nI found a working IPv6 patch for fail2ban and it works for me on several production servers \\(fedora, rhel/centos/scientific\\_linux\\) \r\nfail2ban-ipv6.tar.bz2\r\n\r\nhttp://thanatos.trollprod.org/sousites/fail2banv6/fail2ban-ipv6.tar.bz2\r\n$ md5 fail2ban-ipv6.tar.bz2 \r\nMD5 \\(fail2ban-ipv6.tar.bz2\\) = 6196ed59f13380f5be5484271256068b\r\ndownloaded 2012-03-08\r\n\r\n\r\nhttp://www.fail2ban.org/wiki/index.php/Fail2ban:Community\\_Portal\r\n\\[...\\]\r\nIPv6 Experimental support\r\nThis little patch allow fail2ban to parse and ban IPv6 ips. Instead of calling\r\niptables, it call ip6tables or iptables depending of the ip presented.\r\nIt works \\!, but don't use name resolution in the logs file.\r\nhttp://thanatos.trollprod.org/sousites/fail2banv6/fail2ban-ipv6.tar.bz2\r\n\r\n\r\n2 short patches\r\nserver/failregex.py\r\nserver/filter.py\r\n\r\n1 file\r\nfail2ban/action.d/iptable46-multiport.conf\r\n\r\n1 script: checks for ipv4 - iptables or ipv6 - ip6tables\r\neg. /usr/bin/ip64tables.sh\r\n\r\nnow you can change jail.conf\r\n\\[ssh-iptables\\]\r\naction=iptable46-multiport \\[name=SSH...\\]\r\n\r\nyou have to chmod the \\*.conf and \\*.sh",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "IPv6 support - a working patch is available",
+  "discussion_thread": {
+    "_id": "ec4a4c1c",
+    "posts": [
+      {
+        "text": "fail2ban-ipv6.tar.bz2 http://thanatos.trollprod.org/sousites/fail2banv6/fail2ban-ipv6.tar.bz2",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/feature-requests/_discuss/thread/ec4a4c1c/b8ee/attachment/fail2ban-ipv6.tar.bz2",
+            "bytes": 2293
+          }
+        ],
+        "author": "shrek-m",
+        "timestamp": "2012-03-09 18:52:17",
+        "slug": "b8ee",
+        "subject": "#65 IPv6 support - a working patch is available"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2012-03-09 18:52:16",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3742718464f1a130667",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/ec4a4c1c/",
+  "ticket_num": 65,
+  "custom_fields": {
+    "_priority": "5",
+    "_milestone": "Next Release (example)"
+  },
+  "created_date": "2012-03-09 18:52:16"
+},{
+  "status": "open",
+  "reported_by_id": "4f5a4ce2b9363c57180007c6",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "shrek-m",
+  "description": "see https://bugzilla.redhat.com/show\\_bug.cgi?id=800694\r\n\\[RFEs\\] A - IPv6 support, B - blocklist.de, C - autofwd\r\n\\--------\r\n\r\nit would be great if you could add direct support for http://www.blocklist.de\r\nhttp://www.blocklist.de/en/api.html\r\nhttp://www.blocklist.de/en/export.html\r\n\r\n\r\nas a none-developer my first thoughts are something like\r\n\r\n1\\)\r\nevtl. action = blocklist\\[.conf\\]\r\ncheck the banned IPs \\(iptables or /var/log/messages\\) if the IPs are listet in\r\nblocklist.de dns and block it with a longer \"bantime\" or a new\r\n\"blocklist\\_bantime\"\r\n\r\n\r\n2\\)\r\nevtl. direct blocklist.de support in fail2ban.\r\n\\- check the &lt;HOST&gt; IPs before banning\r\n\\- check the banned IPs later\r\n\r\nhttp://www.blocklist.de/en/api.html\r\nhttp://www.blocklist.de/en/export.html\r\n\r\nevtl. additional definitions in jail.conf ?\r\neg.\r\nblocklist\\_use = yes | no\r\nblocklist\\_source = dns | url | file | all\r\nbloclist\\_destination = apache | asterisk | bots | ftp | imap | mail | ssh | all\r\nblocklist\\_bantime = &lt;time in seconds | one\\_hour | one\\_day | one\\_month |\r\none\\_year&gt;\r\n\\--------/--------\r\n\r\n\r\ni got a short answer from a python-developer\r\n\\---- is this a correct python snippet for IPv4 reverseDNS ? ----\r\nip = '89.140.99.27'.split\\('.'\\)\r\nip.reverse\\(\\)\r\nip = '.'.join\\(ip + \\['bl.blocklist.de',\\]\\)\r\n\\---- or  ----\r\ndef rdnsblocklist\\(ip\\):\r\nip = ip.split\\('.'\\)\r\nip.reverse\\(\\)\r\nreturn '.'.join\\(ip + \\['bl.blocklist.de',\\]\\)\r\n\r\n\\# to use as\r\nrdnsblocklist\\( '89.140.99.27'\\) \r\n\\----/python snippet ----\r\n\r\n\r\nOther additional info for some handy time variables from ...\r\n\r\n\\---- http://www.fail2ban.org/wiki/index.php/Fail2ban:Community\\_Portal ----\r\nHandy time variable aliases\r\n\r\nI've \\(re-\\)discovered that one can use handy time aliases for bantime and\r\nfindtime.\r\n\\---- jail.conf ----\r\nHere's how I defined them in my jail.conf: \r\n\\#\\# bantime of 3600 = 60\\*60 = one hour\r\n\\#\\# bantime of 86400 = 60\\*60\\*24 = one day\r\n\\#\\# bantime of 604800 = 60\\*60\\*24\\*7 = one week\r\n\\#\\# bantime of 2592000 = 60\\*60\\*24\\*30 = \\(approx\\) one month\r\n\\#\\# bantime of 31536000 = 60\\*60\\*24\\*365 = \\(approx\\) one year\r\none\\_hour = 3600\r\none\\_day = 86400\r\none\\_week = 604800\r\none\\_month = 2592000\r\none\\_year = 31536000 \r\n\\----/jail.conf ----\r\n\r\nUse the aliases like this:\r\n\\---- jail.conf ----\r\nfindtime = %\\(one\\_week\\)s\r\nbantime = %\\(one\\_week\\)s\r\n\\----/jail.conf ----\r\nRemember the trailing \"s\"\\! \r\n\\----/----",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "direct blocklist.de support as action or as definitions",
+  "discussion_thread": {
+    "_id": "0c5e9d3b",
+    "posts": [
+      {
+        "text": "Info for  IPv6  and  fail2ban  blocklist.de  support, here is a quote\r\n\r\n\\---- blocklist.de  ipv6   2012-03-13 ----\r\nWhen you have patched Fail2ban and he can support ipv6, we can also list ipv6-Attackers, but not in the dns-rbl.\r\nThe Database-Fieds an IP-Checks are IPv6 ready, but at the moment i never have seen an ipv6-attacker.\r\n\r\nYour blocklist.de-Team\r\n\\----/----",
+        "attachments": [],
+        "author": "shrek-m",
+        "timestamp": "2012-03-13 16:12:21",
+        "slug": "7a68",
+        "subject": "#66 direct blocklist.de support as action or as definitions"
+      }
+    ],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2012-03-09 19:14:47",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3752718464f1a13067a",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/0c5e9d3b/",
+  "ticket_num": 66,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2012-03-09 19:14:47"
+},{
+  "status": "open",
+  "reported_by_id": "517abec55fcbc9798b8f37e0",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "mccurly",
+  "description": "hi\\!\r\nwhat about banning ip's from more than one machine?\r\ni think there is a need for syncing banned ips from one machine to others.\r\nthe sync might be handeled by the server instances and the command to do that, might come from the client of f2b.\r\n\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "synchronize multible f2b machines",
+  "discussion_thread": {
+    "_id": "66eb1e4c",
+    "posts": [],
+    "discussion_id": "51acf3012718464f1a1300d5",
+    "subject": ""
+  },
+  "mod_date": "2012-04-13 09:28:08",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf3762718464f1a130687",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/feature-requests/_discuss/thread/66eb1e4c/",
+  "ticket_num": 67,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2012-04-13 09:28:08"
+}],
+"tracker_config":{
+  "_id": "51acf3012718464f1a1300d3",
+  "options": {
+    "ordinal": 8,
+    "import_id": "tracker/689047",
+    "mount_point": "feature-requests",
+    "TicketMonitoringType": null,
+    "EnableVoting": false,
+    "TicketMonitoringEmail": "",
+    "mount_label": "Feature Requests"
+  }
+},
+"milestones":[
+  {
+    "due_date": null,
+    "complete": false,
+    "name": "Next Release (example)",
+    "closed": 1,
+    "total": 10,
+    "description": "Next Release (example)"
+  }
+],
+"custom_fields":[
+  {
+    "milestones": [
+      {
+        "due_date": null,
+        "description": "Next Release (example)",
+        "name": "Next Release (example)",
+        "complete": false
+      }
+    ],
+    "type": "milestone",
+    "name": "_milestone",
+    "label": "Group"
+  },
+  {
+    "label": "Priority",
+    "type": "select",
+    "options": "1 2 3 4 *5 6 7 8 9",
+    "name": "_priority"
+  }
+],
+"open_status_names":"open unread accepted pending",
+"closed_status_names":"closed wont-fix",
+"saved_bins":[
+  {
+    "sort": "mod_date_dt desc",
+    "_id": "51acf3022718464f1a1300db",
+    "terms": "!status:wont-fix && !status:closed",
+    "summary": "Changes"
+  },
+  {
+    "sort": "",
+    "_id": "51acf3022718464f1a1300da",
+    "terms": "status:wont-fix or status:closed",
+    "summary": "Closed Tickets"
+  },
+  {
+    "sort": "",
+    "_id": "51acf3022718464f1a1300d9",
+    "terms": "!status:wont-fix && !status:closed",
+    "summary": "Open Tickets"
+  }
+]}

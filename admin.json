@@ -1,0 +1,205 @@
+{
+  "status": "active",
+  "preferred_support_tool": "_url",
+  "preferred_support_url": "https://github.com/fail2ban/fail2ban/issues",
+  "labels": [],
+  "private": false,
+  "socialnetworks": [
+    {
+      "accounturl": "",
+      "socialnetwork": "Twitter"
+    },
+    {
+      "accounturl": null,
+      "socialnetwork": "Facebook"
+    }
+  ],
+  "tools": [
+    {
+      "mount_point": "admin",
+      "name": "admin",
+      "label": "Admin"
+    },
+    {
+      "mount_point": "summary",
+      "name": "summary",
+      "label": "Summary"
+    },
+    {
+      "mount_point": "support",
+      "name": "support",
+      "label": "Support"
+    },
+    {
+      "mount_point": "reviews",
+      "name": "reviews",
+      "label": "Reviews"
+    },
+    {
+      "mount_point": "files",
+      "name": "files",
+      "label": "Files"
+    },
+    {
+      "mount_point": "search",
+      "name": "search",
+      "label": "search"
+    },
+    {
+      "mount_point": "news",
+      "name": "blog",
+      "label": "News"
+    },
+    {
+      "mount_point": "wiki",
+      "name": "wiki",
+      "label": "Wiki"
+    },
+    {
+      "mount_point": "mailman",
+      "name": "mailman",
+      "label": "Mailing Lists"
+    },
+    {
+      "mount_point": "patches",
+      "name": "tickets",
+      "label": "Patches"
+    },
+    {
+      "mount_point": "donate",
+      "name": "link",
+      "label": "Donate"
+    },
+    {
+      "mount_point": "feature-requests",
+      "name": "tickets",
+      "label": "Feature Requests"
+    },
+    {
+      "mount_point": "bugs",
+      "name": "tickets",
+      "label": "Bugs"
+    },
+    {
+      "mount_point": "tickets",
+      "name": "tickets",
+      "label": "Tickets"
+    }
+  ],
+  "categories": {
+    "developmentstatus": [
+      {
+        "fullpath": "Development Status :: 5 - Production/Stable",
+        "fullname": "5 - Production/Stable",
+        "shortname": "production",
+        "id": 11
+      },
+      {
+        "fullpath": "Development Status :: 4 - Beta",
+        "fullname": "4 - Beta",
+        "shortname": "beta",
+        "id": 10
+      }
+    ],
+    "environment": [],
+    "language": [
+      {
+        "fullpath": "Programming Language :: Python",
+        "fullname": "Python",
+        "shortname": "python",
+        "id": 178
+      }
+    ],
+    "license": [
+      {
+        "fullpath": "License :: OSI-Approved Open Source :: GNU General Public License version 2.0 (GPLv2)",
+        "fullname": "GNU General Public License version 2.0 (GPLv2)",
+        "shortname": "gpl",
+        "id": 15
+      }
+    ],
+    "database": [],
+    "topic": [
+      {
+        "fullpath": "Topic :: System :: Networking :: Firewalls",
+        "fullname": "Firewalls",
+        "shortname": "firewalls",
+        "id": 151
+      },
+      {
+        "fullpath": "Topic :: System :: Logging",
+        "fullname": "Logging",
+        "shortname": "logging",
+        "id": 148
+      }
+    ],
+    "audience": [
+      {
+        "fullpath": "Intended Audience :: by End-User Class :: System Administrators",
+        "fullname": "System Administrators",
+        "shortname": "sysadmins",
+        "id": 4
+      }
+    ],
+    "translation": [
+      {
+        "fullpath": "Translations :: English",
+        "fullname": "English",
+        "shortname": "english",
+        "id": 275
+      }
+    ],
+    "os": [
+      {
+        "fullpath": "Operating System :: Modern (Vendor-Supported) Desktop Operating Systems :: Linux",
+        "fullname": "Linux",
+        "shortname": "linux",
+        "id": 201
+      },
+      {
+        "fullpath": "Operating System :: Grouping and Descriptive Categories :: All POSIX (Linux/BSD/UNIX-like OSes)",
+        "fullname": "All POSIX (Linux/BSD/UNIX-like OSes)",
+        "shortname": "posix",
+        "id": 200
+      }
+    ]
+  },
+  "developers": [
+    {
+      "url": "http://sourceforge.net/u/yarikoptic/",
+      "username": "yarikoptic",
+      "name": "Yaroslav Halchenko"
+    },
+    {
+      "url": "http://sourceforge.net/u/buanzo/",
+      "username": "buanzo",
+      "name": "Arturo Alberto Busleiman"
+    },
+    {
+      "url": "http://sourceforge.net/u/lostcontrol/",
+      "username": "lostcontrol",
+      "name": "Cyril Jaquier"
+    },
+    {
+      "url": "http://sourceforge.net/u/kdrapel/",
+      "username": "kdrapel",
+      "name": "Kevin Drapel"
+    }
+  ],
+  "name": "Fail2Ban",
+  "url": "http://sourceforge.net/p/fail2ban/",
+  "icon_url": null,
+  "screenshots": [
+    {
+      "url": "http://sourceforge.net/p/fail2ban/screenshot/19130.jpg",
+      "caption": "Fail2Ban log file output example",
+      "thumbnail_url": "http://sourceforge.net/p/fail2ban/screenshot/19130.jpg/thumb"
+    }
+  ],
+  "summary": "",
+  "short_description": "Fail2Ban monitors log files like /var/log/pwdfail or /var/log/apache/error_log and bans failure-prone addresses. It updates firewall rules to reject the IP address or executes user defined commands.\r\n\r\nPlease see code and download from https://github.com/fail2ban/fail2ban .  SF Fail2ban portal might not be up-to-date",
+  "moved_to_url": "",
+  "shortname": "fail2ban",
+  "_id": "51acf2162718464f1a12f67c",
+  "external_homepage": "http://www.fail2ban.org"
+}

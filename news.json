@@ -1,0 +1,528 @@
+{"posts": [{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2004/10/fail2ban-010-released/",
+  "text": "The first alpha version of Fail2Ban is available. Fail2Ban scans log files like /var/log/pwdfail and bans IP that makes too much password failures. It uses firewall rules to reject the IP address. Currently metalog and iptables are supported but it should work with other syslog daemons.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "10c504c8",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.1.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:16.681000",
+  "title": "fail2ban-0.1.0 released",
+  "_id": "51acf3782718464f1a1306a3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/10c504c8/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2004/10/fail2ban-011-released/",
+  "text": "The first beta release of fail2ban is available. The majority of the features which I planned are implemented. Have a look at the README and CHANGELOG for more details. Feel free to give it a try. You can report any comments or bugs here on SourceForge.net.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "2fddf95e",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.1.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:18.455000",
+  "title": "fail2ban-0.1.1 released",
+  "_id": "51acf37a2718464f1a1306b3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/2fddf95e/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2004/11/fail2ban-012-released/",
+  "text": "The second beta release of fail2ban is available. You can now choose the network interface and support for ipfw and ipfwadm is present but needs more testing. Have a look at the README and CHANGELOG for more details. Feel free to give it a try. You can report any comments or bugs here on SourceForge.net.\r\n\r\nhttp://sourceforge.net/projects/fail2ban",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "47c079ac",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.1.2 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:18.897000",
+  "title": "fail2ban-0.1.2 released",
+  "_id": "51acf37a2718464f1a1306bb",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/47c079ac/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/02/fail2ban-030-released/",
+  "text": "After several months of inactivity, a new release of Fail2Ban is available. It can now supervise several files and supports regular expressions. Thus it is possible to ban IPs which try brute force against Apache authentification for example.\r\n\r\nIf you own a server with services such as Apache, SSH or others, try it.\r\n\r\nhttp://fail2ban.sourceforge.net/",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "2409cdd5",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.3.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:19.349000",
+  "title": "fail2ban-0.3.0 released",
+  "_id": "51acf37b2718464f1a1306c3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/2409cdd5/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/03/fail2ban-031-released/",
+  "text": "This new release adds support for DNS lookups and improves the reading speed of the log files. There is also some bugs fixes.\r\n\r\nFail2Ban scans log files like /var/log/pwdfail or /var/log/apache/error\\_log and bans IP that makes too many password failures. It updates firewall rules to reject the IP address.\r\n\r\nhttp://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "fb3f03ec",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.3.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:19.957000",
+  "title": "fail2ban-0.3.1 released",
+  "_id": "51acf37b2718464f1a1306cb",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/fb3f03ec/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/04/fail2ban-040-released/",
+  "text": "I'm proud to announce the first stable release of Fail2ban. There is only one bug fix since 0.3.1.\r\n\r\nFail2Ban scans log files like /var/log/pwdfail or /var/log/apache/error\\_log and bans IP that makes too many password failures.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "630e1f09",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.4.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:20.567000",
+  "title": "fail2ban-0.4.0 released",
+  "_id": "51acf37c2718464f1a1306d3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/630e1f09/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/06/fail2ban-041-released/",
+  "text": "This revision contains only a bug fix in textToDNS and a more readable configuration file. A initd script for Gentoo is also available.\r\n\r\nI would really appreciate initd scripts for others distributions.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "91d929ca",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.4.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:21.083000",
+  "title": "fail2ban-0.4.1 released",
+  "_id": "51acf37c2718464f1a1306db",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/91d929ca/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/07/fail2ban-050-released/",
+  "text": "This is a development release. A lot of new features are available \\(mail notification, CIDR support, firewall rules configuration, etc\\). Please test this version and report any bugs in order to make it stable as soon as possible.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "81fb1669",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.5.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:17.942000",
+  "title": "fail2ban-0.5.0 released",
+  "_id": "51acf3792718464f1a1306ab",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/81fb1669/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/07/fail2ban-051-released/",
+  "text": "This release fixes bugs discovered in 0.5.0 and add multi targets for the log output including syslog. Default config creates an iptables chain for each section.\r\n\r\nPlease do not forget to remove your previous 0.4.x version before upgrading to 0.5.x and update your configuration file.\r\n\r\nfail2ban-0.5.1 is still an unstable version but should work perfectly.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "c8a7c41d",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.5.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:22.009000",
+  "title": "fail2ban-0.5.1 released",
+  "_id": "51acf37d2718464f1a1306eb",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/c8a7c41d/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/08/fail2ban-052-released/",
+  "text": "This release fixes bugs discovered in 0.5.x and remove the log4py dependancy. Basic man pages are available.\r\n\r\nPlease do not forget to remove your previous 0.4.x version before upgrading to 0.5.x and update your configuration file. \r\n\r\nfail2ban-0.5.2 is still an unstable version but should work perfectly. I hope this one will be the last before stable.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "4b4716c5",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.5.2 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:21.661000",
+  "title": "fail2ban-0.5.2 released",
+  "_id": "51acf37d2718464f1a1306e3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/4b4716c5/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/09/fail2ban-053-released/",
+  "text": "This release fixes bugs discovered in 0.5.x. I hope bug \\#1256075 is fixed now. This release should be the latest before stable.\r\n\r\nPlease do not forget to remove your previous 0.4.x version before upgrading to 0.5.x and update your configuration file.  \r\n\r\nfail2ban-0.5.3 is still an unstable version but should work perfectly.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "5c8923a7",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.5.3 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:22.667000",
+  "title": "fail2ban-0.5.3 released",
+  "_id": "51acf37e2718464f1a1306f3",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/5c8923a7/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/09/fail2ban-054-released/",
+  "text": "Less than a week after the version 0.5.3, I release 0.5.4 with new features introduced by Debian maintainer, Yaroslav Halchenko. There is too many changes to release directly a stable version.\r\n\r\nPlease do not forget to remove your previous 0.4.x version before upgrading to 0.5.x and update your configuration file.  \r\n\r\nfail2ban-0.5.4 is still an unstable version but should work perfectly. \r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "daed9c15",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.5.4 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:23.321000",
+  "title": "fail2ban-0.5.4 released",
+  "_id": "51acf37f2718464f1a1306fb",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/daed9c15/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/10/fail2ban-055-released/",
+  "text": "I planned a stable release for september. However, we decided to fix some issues before 0.6. Have a look at the changelog for more informations. I will not promise anymore that this is the last one before stable ;-\\) Please test it and report any problem. Many thanks to Yaroslav Halchenko who did most of the changes found in this release.\r\n\r\nPlease do not forget to remove your previous 0.4.x version before upgrading to 0.5.x and update your configuration file.  \r\n\r\nfail2ban-0.5.5 is a testing version but should work perfectly.  \r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "be1c4ee4",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.5.5 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:24.066000",
+  "title": "fail2ban-0.5.5 released",
+  "_id": "51acf37f2718464f1a130703",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/be1c4ee4/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2005/11/fail2ban-060-released/",
+  "text": "More than 6 months after the first 0.4.x version, a new stable release is available. New features include mail notification, firewall rules in config file, no more log4py dependency, bug fixes, etc. Have a look at the changelog. Many thanks to Yaroslav Halchenko who did a lot of work for this release.\r\n\r\nPlease do not forget to remove your previous 0.4.x installation before upgrading to 0.6.0 and update your configuration file.  \r\n\r\nfail2ban-0.6.0 is the current stable version. It has been well tested and should not contain severe bugs.\r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "dabe89a7",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.6.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:25.270000",
+  "title": "fail2ban-0.6.0 released",
+  "_id": "51acf3802718464f1a13070b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/dabe89a7/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/03/fail2ban-061-released/",
+  "text": "Fail2ban 0.6.1 is out. It contains a few bug fixes and some new features. Have a look at the changelog file for more details. We are now working on a new version with a lot of new features.\r\n\r\nfail2ban-0.6.1 is the current stable version. It has been well tested and should not contain severe bugs. \r\n\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "be3dc440",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.6.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:25.907000",
+  "title": "fail2ban-0.6.1 released",
+  "_id": "51acf3812718464f1a130713",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/be3dc440/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/08/fail2ban-070-released/",
+  "text": "Here is the first release of the newly 0.7.x branch. This is almost a complete rewrite of Fail2ban with multithreading, client/server, better configuration files, etc. There is still a lot of work before 0.8.0 but it should already run correctly.\r\n\r\nFail2ban 0.7.0 is considered alpha software. I need feedback and bug reports. So please, test it ;\\)\r\n\r\nHowto: http://fail2ban.sourceforge.net/wiki/index.php/HOWTO\\_fail2ban\\_0.7.x\r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "95d64f70",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:26.533000",
+  "title": "fail2ban-0.7.0 released",
+  "_id": "51acf3822718464f1a13071b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/95d64f70/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/08/fail2ban-071-released/",
+  "text": "A few critical bugs were found in 0.7.0. This release should fix them.\r\n\r\nFail2ban 0.7.1 is considered alpha software. I need feedback and bug reports. So please, test it ;\\) \r\n\r\nHowto: http://fail2ban.sourceforge.net/wiki/index.php/HOWTO\\_fail2ban\\_0.7.x \r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "e515761c",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:15.932000",
+  "title": "fail2ban-0.7.1 released",
+  "_id": "51acf3772718464f1a130693",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/e515761c/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/09/fail2ban-072-released/",
+  "text": "Here is a new development release with pretty much improvements. A date detector is now available and &quot;timeregex&quot; and &quot;timepattern&quot; are no more required. An interactive mode and a new tool, fail2ban-regex, have been added. Please look at the ChangeLog for a more complete list of changes.\r\n\r\nFail2ban 0.7.2 is considered beta software. I need feedback and bug reports. So please, test it ;\\)\r\n\r\nHowto: http://fail2ban.sourceforge.net/wiki/index.php/HOWTO\\_fail2ban\\_0.7.x \r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "ef6fa60f",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.2 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:16.309000",
+  "title": "fail2ban-0.7.2 released",
+  "_id": "51acf3782718464f1a13069b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/ef6fa60f/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/09/fail2ban-073-released/",
+  "text": "Two major features were added in this release. Fail2ban takes now advantage of Gamin if available. Now &quot;logpath&quot; supports wildcards which allow several files to be monitored by one jail.  Please look at the ChangeLog for a more complete list of changes.\r\n\r\nFail2ban 0.7.3 contains all the major features for 0.8. I need feedback and bug reports. So please, test it ;\\) \r\n\r\nHowto: http://fail2ban.sourceforge.net/wiki/index.php/HOWTO\\_fail2ban\\_0.7.x  \r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "55686110",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.3 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:27.262000",
+  "title": "fail2ban-0.7.3 released",
+  "_id": "51acf3832718464f1a130723",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/55686110/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/11/fail2ban-074-released/",
+  "text": "Here is a new beta release of Fail2ban. This version adds more actions, filters and date templates. There is quite a lot of bug fixes and small improvements. Please look at the ChangeLog for a more complete list of changes. \r\n\r\nFail2ban 0.7.4 contains all the major features for 0.8. I need more feedback and bug reports. So please, test it ;\\)  \r\n\r\nManual: http://fail2ban.sourceforge.net/wiki/index.php/MANUAL\\_0\\_8 \r\nHowto: http://fail2ban.sourceforge.net/wiki/index.php/HOWTO\\_fail2ban\\_0.7.x  \r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "52b43d48",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.4 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:28.610000",
+  "title": "fail2ban-0.7.4 released",
+  "_id": "51acf3842718464f1a13072b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/52b43d48/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/12/fail2ban-062-released/",
+  "text": "This new release fix a few bugs and a vulnerability \\(CVE-2006-6302\\). The new &quot;locale&quot; option should help user with bug \\#1457620. Please do not forget to update your configuration file in order to fix CVE-2006-6302.\r\n\r\nAll users should upgrade to this version.\r\n\r\nNotice that the Debian package is not affected by this security issue.\r\n\r\nCVE-2006-6302: http://www.frsirt.com/english/advisories/2006/4877  \r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "9d42ecea",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.6.2 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:30.305000",
+  "title": "fail2ban-0.6.2 released",
+  "_id": "51acf3862718464f1a13073b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/9d42ecea/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2006/12/fail2ban-075-released/",
+  "text": "Here is a new beta release of Fail2ban. This version contains mostly bug fixes. A new option &quot;ignoreregex&quot; has been added. Please look at the CHANGELOG for a more complete list of changes. \r\n\r\nThis version seems to be quite stable. The next releases should be release candidates.\r\n\r\nYaroslav Halchenko who maintains the Debian package of Fail2ban is now an official Debian Maintainer. Congratulations and many thanks to him for his work on Fail2ban.\r\n\r\nManual: http://fail2ban.sourceforge.net/wiki/index.php/MANUAL\\_0\\_8 \r\nHowto: http://fail2ban.sourceforge.net/wiki/index.php/HOWTO\\_fail2ban\\_0.7.x  \r\nHomepage: http://fail2ban.sourceforge.net",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "c65602e1",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.5 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:29.704000",
+  "title": "fail2ban-0.7.5 released",
+  "_id": "51acf3852718464f1a130733",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/c65602e1/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2007/01/fail2ban-076-released/",
+  "text": "Here is a new beta release of Fail2ban. This version is still considered as beta because two important changes appear in this release:\r\n\r\n1\\) The installation directory moved from /usr/lib/fail2ban to /usr/share/fail2ban\r\n2\\) &quot;failregex&quot; and &quot;ignoreregex&quot; now support multiple regular expressions\r\n\r\nThis release contains a few minor bug fixes too. Please look at the CHANGELOG for a more complete list of changes.\r\n\r\nFocus is still on documentation. Any help in this area would be appreciate \\(howto, FAQ, corrections of my poor English, etc\\). This can be done directly by editing the wiki.\r\n\r\nI created several new pages on the wiki. They are regrouped here:\r\n\r\nhttp://fail2ban.sourceforge.net/wiki/index.php/Category:Configuration\r\n\r\nThe idea is to list in these pages the logging messages that should be matched by Fail2ban. And this for each service/software.\r\n\r\nThe goal is to provide the best regular expressions which match these messages. The proposed regular expressions can be discussed on the discussion page of each software.\r\n\r\nPlease, do not hesitate to contribute, discuss or edit the wiki. The best way to see what changed on the wiki is to look at:\r\n\r\nhttp://fail2ban.sourceforge.net/wiki/index.php/Special:Recentchanges\r\n\r\nMany thanks to everyone who contributed to this release.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "89e5a031",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.6 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:31.195000",
+  "title": "fail2ban-0.7.6 released",
+  "_id": "51acf3862718464f1a130743",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/89e5a031/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2007/02/fail2ban-077-released/",
+  "text": "I'm proud to announce the release of the version 0.7.7 of Fail2ban, the first and hopefully the only release candidate. There is almost no bug fixes in this release. Here is a short summary of the changes:\r\n\r\n1\\) fail2ban-regex has been completely rewritten and can now accept both log file and filter file. This should help testing regular expressions.\r\n2\\) Cacti template and script in order to graph failed and banned hits.\r\n3\\) some new filter and action scripts.\r\n4\\) fail2ban-client status &lt;jail&gt; now display the currently banned IP addresses.\r\n\r\nThe complete list of changes is available in the CHANGELOG.\r\n\r\nFail2ban has a new domain name. You can now find the wiki, nightly snapshots, downloads at http://www.fail2ban.org.\r\n\r\nPlease, do not hesitate to contribute, discuss or edit the wiki. The best way to see what changed on the wiki is to look at: \r\n\r\nhttp://www.fail2ban.org/wiki/index.php/Special:Recentchanges \r\n\r\nMany thanks to everyone who contributed to this release.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "18dfb731",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.7 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:31.963000",
+  "title": "fail2ban-0.7.7 released",
+  "_id": "51acf3872718464f1a13074b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/18dfb731/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2007/03/fail2ban-078-released/",
+  "text": "Here is a new release candidate. A bug in the date detector has been fixed and a few new filters/actions have been added. 0.8 is quite close now.\r\n\r\nThe complete list of changes is available in the CHANGELOG.\r\n\r\nFail2ban has a new domain name. You can now find the wiki, nightly snapshots, downloads at http://www.fail2ban.org.\r\n\r\nPlease, do not hesitate to contribute, discuss or edit the wiki. The best way to see what changed on the wiki is to look at: \r\n\r\nhttp://www.fail2ban.org/wiki/index.php/Special:Recentchanges \r\n\r\nMany thanks to everyone who contributed to this release.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "5e08dad6",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.8 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:32.517000",
+  "title": "fail2ban-0.7.8 released",
+  "_id": "51acf3882718464f1a130753",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/5e08dad6/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2007/04/fail2ban-079-released/",
+  "text": "Here is a new release candidate. Yaroslav Halchenko fixed a bug in the &quot;reload&quot; command causing Fail2ban to hang. Many thanks to him. There are a few other small fixes and improvements.\r\n\r\nThe complete list of changes is available in the CHANGELOG. \r\n\r\nFail2ban has a new domain name. You can now find the wiki, nightly snapshots, downloads at http://www.fail2ban.org. \r\n\r\nPlease, do not hesitate to contribute, discuss or edit the wiki. The best way to see what changed on the wiki is to look at:  \r\n\r\nhttp://www.fail2ban.org/wiki/index.php/Special:Recentchanges  \r\n\r\nMany thanks to everyone who contributed to this release.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "9f77dfa4",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.7.9 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:33.010000",
+  "title": "fail2ban-0.7.9 released",
+  "_id": "51acf3882718464f1a13075b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/9f77dfa4/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2007/05/fail2ban-080-released/",
+  "text": "I'm proud to announce the release of Fail2ban 0.8.0. This is the first release of the new stable branch. The development of this release has taken about a year and is almost a complete rewrite from 0.6. A lot of new features have been added. Here are some of them:\r\n\r\n\\- client/server architecture\r\n\\- multithreading support\r\n\\- better configuration\r\n\\- date format autodetection\r\n\\- Gamin support\r\n\\- better documentation and website\r\n\\- support for more services\r\n\r\nUnfortunately, the configuration file of Fail2ban 0.6.x is not compatible with this release. However, default configuration files should be sufficient and writing your own filters, actions and jails should be quite straightforward \\[1\\].\r\n\r\nThe official website \\[2\\] is now powered by MediaWiki. Please, do not hesitate to contribute, discuss or edit the articles. A domain name is now dedicated to the project: fail2ban.org.\r\n\r\nIf you appreciate this software, you can now donate to the project \\[3\\]. Donations will be used to pay the domain fail2ban.org and to contribute to the financing of the dedicated server where the website, nightly builds \\[4\\] and documentation are hosted. Parts of donation will go to KDE, Gnome and The Python Software Foundation.\r\n\r\nI would like to thank everyone who contributed to this release. A \\(hopefully complete\\) list is available in README \\[5\\]. Special thanks to Yaroslav Halchenko who does a lot of work for this project.\r\n\r\n0.8.0 contains only 2 minor changes since 0.7.9. Have a look at the CHANGELOG \\[6\\] for more information. You can download the source package here \\[7\\]. I suggest you have a look at the manual \\[8\\] before using this new release.\r\n\r\n\\[1\\] http://www.fail2ban.org/wiki/index.php/HOWTO\\_Upgrade\\_from\\_0.6\\_to\\_0.8\r\n\\[2\\] http://www.fail2ban.org\r\n\\[3\\] http://sourceforge.net/donate/index.php?group\\_id=121032\r\n\\[4\\] http://www.fail2ban.org/nightly/\r\n\\[5\\] http://www.fail2ban.org/wiki/index.php/README\r\n\\[6\\] http://www.fail2ban.org/wiki/index.php/ChangeLog\r\n\\[7\\] http://sourceforge.net/project/showfiles.php?group\\_id=121032\r\n\\[8\\] http://www.fail2ban.org/wiki/index.php/MANUAL\\_0\\_8",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "29d93852",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.8.0 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:33.641000",
+  "title": "fail2ban-0.8.0 released",
+  "_id": "51acf3892718464f1a130763",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/29d93852/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2007/08/fail2ban-081-released/",
+  "text": "Fail2Ban monitors log files like /var/log/pwdfail or /var/log/apache/error\\_log and bans failure-prone addresses. It updates firewall rules to reject the IP address or executes user defined commands.\r\n\r\n\r\nThis new release fixes some security issues in the default configuration files and includes new filters and actions. The &quot;mail&quot; actions are now deprecated and should be replaced with &quot;sendmail&quot; actions. fail2ban-regex now accepts &quot;ignoreregex&quot;.\r\n\r\nMany thanks to everyone who contributed to this release.",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "cdab1fc7",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.8.1 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:35.053000",
+  "title": "fail2ban-0.8.1 released",
+  "_id": "51acf38a2718464f1a13076b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/cdab1fc7/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2008/03/fail2ban-082-released/",
+  "text": "More than 6 months since the last release, 0.8.2 is finally out \\[1\\]. This one contains a lot of fixes and new features. So I hope we have not introduced to many bugs. Here are the most important things introduced in 0.8.2:\r\n\r\n\\- Added &quot;full line failregex&quot;. It is now possible to match a whole line. This should avoid deny of service attacks against fail2ban. Currently only sshd.conf uses this feature. Thanks to Yaroslav Halchenko.\r\n\r\n\\- The default socket location is now /var/run/fail2ban. Do not forget to create this directory first. Moreover, fail2ban-server create a PID file in this directory.\r\n\r\n\\- New communication server using asyncore/asynchat. Fixes some issues on Solaris.\r\n\r\n\\- Python 2.3 support. Fail2ban 0.8.2 now runs with Python 2.3.\r\n\r\n\\- New log rotation detection implementation. Much simpler and less buggy.\r\n\r\nThere are a lot of other fixes and features. Please look at the ChangeLog for all the details \\[2\\]. Configuration files from previous 0.8 releases are compatible with 0.8.2. So I recommend to upgrade to this version.\r\n\r\nMany thanks to everyone who contributed to this release.\r\n\r\n\\[1\\] http://downloads.sourceforge.net/fail2ban/fail2ban-0.8.2.tar.bz2\r\n\\[2\\] http://www.fail2ban.org",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "fcd7bd94",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.8.2 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:36.401000",
+  "title": "fail2ban-0.8.2 released",
+  "_id": "51acf38b2718464f1a130773",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/fcd7bd94/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2008/07/fail2ban-083-released/",
+  "text": "Here is a new release of fail2ban \\[1\\]. 0.8.3 should fix the famous &quot;Unknown error 514&quot; and the wrong PID in fail2ban.pid. There are a few more fixes and improvements. I have not yet applied all the patches I received. This will be done in a next release.\r\n\r\nAs always, do not forget to visit the website \\[2\\] and contribute to the documentation.\r\n\r\nMany thanks to everyone who contributed to this release. \r\n\r\n\\[1\\] http://downloads.sourceforge.net/fail2ban/fail2ban-0.8.3.tar.bz2\r\n\\[2\\] http://www.fail2ban.org",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "c9d89561",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.8.3 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:37.158000",
+  "title": "fail2ban-0.8.3 released",
+  "_id": "51acf38c2718464f1a13077b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/c9d89561/"
+},{
+  "related_artifacts": [],
+  "author": "lostcontrol",
+  "url": "http://sourceforge.net/rest/p/fail2ban/news/2009/09/fail2ban-084-released/",
+  "text": "First of all: Hi\\! This is Arturo 'Buanzo' Busleiman. I joined the fail2ban development team a couple weeks ago, to try and fix some bugs. Apparently, I've succeeded. So, with permission of Cyril, I give you.... fail2ban 0.8.4\\! \\[1\\]\n\nWe have both bugfixes AND new features to introduce. 0.8.4 is the first fail2ban release to work with Python 2.6. You will never see the infamous &quot;unexpected communication problem&quot; error message anymore \\(we hope\\). Additionally, the logging subsystem is now shutdown when it really is not needed anymore, which fixes the &quot;cannot release un-acquired lock&quot; issue. Christos Psonis assisted in fixing the maxretry/findtime rate problem \\(thank you, Christos\\!\\).\n\nOn the new-features front, we have:\n\n\\* A fail2ban-client command to manually ban a specific IP for a certain jail \\(buanzo\\).\n\\* Two new filters: lighttpd-fastcgi and php-url-fopen \\(buanzo\\).\n\\* Added actions to report abuse to ISP, DShield and myNetWatchman. Thanks to Russell Odom.\n\\* A SuSE init script that correctly handles the socket file on crash. Thanks to Detlef Reichelt.\n\\* A Nagios script to help you integrate fail2ban with Nagios. Thanks to Sebastian Mueller.\n\\* Added NetBSD ipfilter \\(ipf command\\) action. Thanks to Ed Ravin.\n\n... and much more\\!\n\nFor specific details, take a look at the ChangeLog file.\n\nThank you very much for using fail2ban. Keep those bug reports, patches and ideas coming\\!\n\nMany thanks to everyone who contributed to this release.\n\nAs always, do not forget to visit the website \\[2\\] and contribute to the documentation.\n\nYours,\nBuanzo and the Fail2ban development team\n\n\n\\[1\\] http://downloads.sourceforge.net/fail2ban/fail2ban-0.8.4.tar.bz2\n\\[2\\] http://www.fail2ban.org\n",
+  "labels": [],
+  "state": "published",
+  "discussion_thread": {
+    "_id": "1e2dfbfa",
+    "posts": [],
+    "discussion_id": "51acf3772718464f1a130690",
+    "subject": "fail2ban-0.8.4 released discussion"
+  },
+  "mod_date": "2013-06-03 19:50:37.884000",
+  "title": "fail2ban-0.8.4 released",
+  "_id": "51acf38d2718464f1a130783",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/news/_discuss/thread/1e2dfbfa/"
+}]}

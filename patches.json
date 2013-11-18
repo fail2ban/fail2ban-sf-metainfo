@@ -1,0 +1,1279 @@
+{"tickets": [{
+  "status": "closed-fixed",
+  "reported_by_id": "4d8b8bec1be1ce0f6f0008e0",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "edgimar",
+  "description": "The following patch makes fail2ban able to parse the timestamp in TAI64N format \\(which is used with daemontools logs\\).  The required configuration options that must be used in the appropriate place in the fail2ban.conf file are the following two:\r\n\r\ntimeregex = @\\[0-9a-f\\]\\{24\\}\r\ntimepattern = tai64n\r\n\r\n\r\n\\(BEGIN PATCH -- based on  fail2ban v0.5.2\\)\r\n\r\n\\--- logreader.py.old    2005-08-28 15:02:58.000000000 -0500\r\n+++ logreader.py        2005-08-28 15:32:10.000000000 -0500\r\n@@ -189,7 +189,12 @@\r\nPattern should describe the date construction of\r\nvalue.\r\n\"\"\"\r\n\\-               date = list\\(time.strptime\\(value, self.timepattern\\)\\)\r\n\\+               seconds\\_since\\_epoch = 0\r\n\\+               if self.timepattern.lower\\(\\) &lt;&gt; \"tai64n\":\r\n\\+                       date = list\\(time.strptime\\(value, self.timepattern\\)\\)\r\n\\+               else: \\# if the parsed value is in TAI64N format\r\n\\+                       seconds\\_since\\_epoch = value\\[9:17\\] \\# chop out part of format which represents seconds since epoch\r\n\\+                       date = list\\(time.gmtime\\(int\\(seconds\\_since\\_epoch,16\\)\\)\\)\r\nif date\\[0\\] &lt; 2000:\r\n\\# There is probably no year field in the logs\r\ndate\\[0\\] = time.gmtime\\(\\)\\[0\\]\r\n\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "permits use with daemontools style logs",
+  "discussion_thread": {
+    "_id": "42c8704a",
+    "posts": [
+      {
+        "text": "Logged In: YES \nuser\\_id=227839\n\nI guess an uploaded patchfile is better since the formatting of the description field by sourceforge leaves a little something to be desired...",
+        "attachments": [],
+        "author": "edgimar",
+        "timestamp": "2005-08-28 21:28:26",
+        "slug": "a0c8",
+        "subject": "#1 permits use with daemontools style logs"
+      },
+      {
+        "text": "logreader.py diff file -- updated 2005.08.29",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/42c8704a/4a47/attachment/logreader.py.diff",
+            "bytes": 896
+          }
+        ],
+        "author": "edgimar",
+        "timestamp": "2005-08-29 21:37:56",
+        "slug": "4a47",
+        "subject": "#1 permits use with daemontools style logs"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nWill be added in next release. Just one question:\r\n\r\nAttached patch says seconds\\_since\\_epoch = value\\[2:17\\] but\r\ncopied/pasted one says seconds\\_since\\_epoch = value\\[9:17\\].\r\nWhich one is correct?\r\n\r\nThank you",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-09-05 18:47:26",
+        "slug": "d0b6",
+        "subject": "#1 permits use with daemontools style logs"
+      },
+      {
+        "text": "- **status**: open --> open-accepted",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2005-09-05 18:47:26",
+        "slug": "2638",
+        "subject": "#1 permits use with daemontools style logs"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=227839\n\nThe attachment is better to use.  Both will work, but the non-\r\nattachment version is only good for the next 50 or so years, \r\nand since we know that fail2ban will be used for the next \r\n5000 years, it makes much more sense to use the version in \r\nthe attachment.\r\n\r\nActually though, it seems right now that python itself \r\n\\(time.gmtime\\(\\)\\) is not able to handle any values larger than \r\n0x7FFFFFFF, which corresponds to the year 2038.\r\n",
+        "attachments": [],
+        "author": "edgimar",
+        "timestamp": "2005-09-05 20:36:30",
+        "slug": "aa1e",
+        "subject": "#1 permits use with daemontools style logs"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded in CVS HEAD. Will be in 0.6.1",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-01-03 15:17:47",
+        "slug": "83e7",
+        "subject": "#1 permits use with daemontools style logs"
+      },
+      {
+        "text": "- **status**: open-accepted --> closed-fixed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-01-03 15:17:47",
+        "slug": "23ce",
+        "subject": "#1 permits use with daemontools style logs"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2006-01-03 15:17:47",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2cf2718464f1a12fe6d",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/42c8704a/",
+  "ticket_num": 1,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-08-28 21:23:46"
+},{
+  "status": "closed-fixed",
+  "reported_by_id": "50acc025e88f3d0bb0ccda8a",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "psychoman_82",
+  "description": "This patch makes the syslog logging more in tune with\r\nthe default format of syslog.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Default formatted syslog logging",
+  "discussion_thread": {
+    "_id": "c55572cb",
+    "posts": [
+      {
+        "text": "Changed formatting of syslog logging",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/c55572cb/998e/attachment/fail2ban-0.6.0_syslog_format.patch",
+            "bytes": 511
+          }
+        ],
+        "author": "psychoman_82",
+        "timestamp": "2005-12-17 00:12:14",
+        "slug": "998e",
+        "subject": "#2 Default formatted syslog logging"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\n\nAdded in CVS HEAD. Will be in 0.6.1",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-01-03 15:17:19",
+        "slug": "25fd",
+        "subject": "#2 Default formatted syslog logging"
+      },
+      {
+        "text": "- **status**: open --> closed-fixed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2006-01-03 15:17:19",
+        "slug": "c51e",
+        "subject": "#2 Default formatted syslog logging"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2006-01-03 15:17:19",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2d32718464f1a12fe9d",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/c55572cb/",
+  "ticket_num": 2,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2005-12-17 00:11:16"
+},{
+  "status": "closed-fixed",
+  "reported_by_id": "4cefcb640594ca7d3e000440",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "gerbier",
+  "description": "this is a small and sad patch \\(I'm not a python programmer\\) to display the list of banned ip address with the \"fail2ban-client status &lt;JAIL&gt;\" command\r\n\r\nhope it can be useful\r\n\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "fail2ban client display banned ip",
+  "discussion_thread": {
+    "_id": "8184636b",
+    "posts": [
+      {
+        "text": "",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/8184636b/1ccf/attachment/fail2ban.patch",
+            "bytes": 1921
+          }
+        ],
+        "author": "gerbier",
+        "timestamp": "2007-01-09 14:27:35",
+        "slug": "1ccf",
+        "subject": "#3 fail2ban client display banned ip"
+      },
+      {
+        "text": "Logged In: YES \nuser\\_id=933467\nOriginator: NO\n\nThank you Eric.\r\n\r\nI applied your patch with some modifications. Will be in 0.7.7.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-29 21:50:35",
+        "slug": "f72e",
+        "subject": "#3 fail2ban client display banned ip"
+      },
+      {
+        "text": "- **status**: open --> closed-fixed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2007-01-29 21:50:35",
+        "slug": "95f4",
+        "subject": "#3 fail2ban client display banned ip"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2007-01-29 21:50:35",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2d52718464f1a12feba",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/8184636b/",
+  "ticket_num": 3,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2007-01-09 14:27:35"
+},{
+  "status": "closed-fixed",
+  "reported_by_id": "51acf2d82718464f1a12fed7",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "davetha",
+  "description": "I noticed that Fail2Ban will not match any of the CPanel logs by default.  I made this patch so we can allow Fail2Ban to function with CPanels logging format.\r\n\r\nI hope to see this patch in future versions of Fail2Ban.\r\n\r\nThanks.\r\nDavid Collins\r\nHostGator.com LLC.\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Fail2Ban Template Addition for cPanel and other services uti",
+  "discussion_thread": {
+    "_id": "70126663",
+    "posts": [
+      {
+        "text": "Fail2ban CP timestamp diff",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/70126663/d24d/attachment/fail2ban-cp_stamp.diff",
+            "bytes": 937
+          }
+        ],
+        "author": "davetha",
+        "timestamp": "2008-05-20 03:24:16",
+        "slug": "d24d",
+        "subject": "#4 Fail2Ban Template Addition for cPanel and other services uti"
+      },
+      {
+        "text": "Committed. Thanks. Will be in 0.8.4.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2009-01-27 23:22:21",
+        "slug": "40f7",
+        "subject": "#4 Fail2Ban Template Addition for cPanel and other services uti"
+      },
+      {
+        "text": "- **status**: open --> closed-fixed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2009-01-27 23:22:21",
+        "slug": "2b88",
+        "subject": "#4 Fail2Ban Template Addition for cPanel and other services uti"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-01-27 23:22:21",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2d82718464f1a12fed6",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/70126663/",
+  "ticket_num": 4,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-05-20 03:24:16"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Just copy jabber.conf into your action.d directory. At your jail.conf add line \r\njabber\\[name=servicename, dest=JID, host=hostname\\]\r\nto your service action section. You have to get notify\\_by\\_jabber perl script. For example from here: http://vodnik.safar.info/notify\\_by\\_jabber",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "notify by jabber",
+  "discussion_thread": {
+    "_id": "a66eb77a",
+    "posts": [
+      {
+        "text": "jabber.conf",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/a66eb77a/8da8/attachment/jabber.conf",
+            "bytes": 1590
+          }
+        ],
+        "author": "nobody",
+        "timestamp": "2008-07-25 10:37:07",
+        "slug": "8da8",
+        "subject": "#5 notify by jabber"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2008-07-25 10:37:07",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2dc2718464f1a12ff10",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/a66eb77a/",
+  "ticket_num": 5,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-07-25 10:37:07"
+},{
+  "status": "closed-accepted",
+  "reported_by_id": "505730f0bfc09e5f2cc13c4a",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "gloomytrousers",
+  "description": "Three new actions for Fail2ban, which will submit complaints about offending IPs to:\r\n\\* DShield \\(http://www.dshield.org/\\)\r\n\\* myNetWatchman \\(http://www.mynetwatchman.com/\\)\r\n\\* the abuse or other contact e-mail address of the ISP concerned \\(found from a whois lookup\\)\r\n\r\nI've been using all 3 of these myself for a month or so with no problems on CentOS 4 and Fedora 8 with Fail2ban 0.8.2. They've also been available on my web site, http://www.gloomytrousers.co.uk/open\\_source/fail2ban.shtml . The only pre-requisites are standard commands like perl, whois, awk, wget/curl, etc.\r\n\r\nReports for DShield are buffered \\(for a configurable time/number of reports\\) then sent be e-mail in batches, as per the guidelines at http://www.dshield.org/specs.html.\r\n\r\nReports to myNetWatchman are submitted to the web service in the same way as the official mNW client.\r\n\r\nThe complaints direct to ISPs tries various patterns to find the correct abuse/complaint addresses from the whois record \\(to avoid contacting inappropriate people\\), and will use those in preference to any other addresses in the whois record if it can. Experience to date has found it's pretty good at getting the right abuse addresses without contacting every address listed in the whois record, and although a surprising number of abuse addresses bounce, and I've had plenty of responses from ISPs indicating they'll take action. It includes a log excerpt \\(with time zone indicated\\) and a configurable message, and seems to meet reporting requirements for all ISPs according to the replies I've had.\r\n\r\nEach file has some documentation and examples.\r\n\r\nSo, I'd like to submit these for inclusion in a future release of Fail2ban. Feedback welcome\\!",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Actions for reports to DShield, myNetWatchman, and ISP",
+  "discussion_thread": {
+    "_id": "8a89ba2f",
+    "posts": [
+      {
+        "text": "dshield.conf, mynetwatchman.conf and complain.conf",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/8a89ba2f/7c35/attachment/fail2ban-complaints.0.2.0.tar.gz",
+            "bytes": 4715
+          }
+        ],
+        "author": "gloomytrousers",
+        "timestamp": "2008-08-10 16:11:48",
+        "slug": "7c35",
+        "subject": "#6 Actions for reports to DShield, myNetWatchman, and ISP"
+      },
+      {
+        "text": "- **summary**: Actions for reports to DSheild, myNetWatchman, and ISP --> Actions for reports to DShield, myNetWatchman, and ISP",
+        "attachments": [],
+        "author": "gloomytrousers",
+        "timestamp": "2008-08-10 16:12:52",
+        "slug": "7f55",
+        "subject": "#6 Actions for reports to DShield, myNetWatchman, and ISP"
+      },
+      {
+        "text": "Added. Thanks. Will be in 0.8.4.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2008-10-13 15:24:58",
+        "slug": "a67e",
+        "subject": "#6 Actions for reports to DShield, myNetWatchman, and ISP"
+      },
+      {
+        "text": "- **status**: open --> closed-accepted",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2008-10-13 15:24:58",
+        "slug": "44ca",
+        "subject": "#6 Actions for reports to DShield, myNetWatchman, and ISP"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2008-10-13 15:24:58",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2dd2718464f1a12ff21",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/8a89ba2f/",
+  "ticket_num": 6,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-08-10 16:11:48"
+},{
+  "status": "closed-fixed",
+  "reported_by_id": "5056373d71b75b3c3a97e7a2",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "pef83",
+  "description": "Hello,\r\n\r\nThe regexp used to match failed SASL authentications \\(/etc/fail2ban/filter.d/sasl.conf\\) does not recognize log entries where \\{CRAM,DIGEST\\}-MD5 challenges are used. \r\nHere is an updated regexp which matches the following log entries :\r\n\r\n: warning: 114-44-134-199.dynamic.hinet.net\\[114.44.134.199\\]: SASL CRAM-MD5 authentication failed\r\n: warning: 114-44-134-199.dynamic.hinet.net\\[114.44.134.199\\]: SASL CRAM-MD5 authentication failed: PDIzMDIzNDk5NzM3NDA5MDcuMTIyNjYwNTc2OEBtYWlsPg==\r\n: warning: 114-44-134-199.dynamic.hinet.net\\[114.44.134.199\\]: SASL DIGEST-MD5 authentication failed: cmVhbG09IiIsbm9uY2U9IkVJMUgyTmhXdkV3RzhiK05hOFJSTnc9PSIscW9wPSJhdXRoIixjaGFyc2V0PSJ1dGYtOCIsYWxnb3JpdGhtPSJtZDUtc2VzcyI=\r\n\r\nThe updated regexp is : \r\nfailregex = : warning: \\[-.\\_\\w\\]+\\\\\\[\\(?:::f\\{4,6\\}:\\)?\\(?P&lt;host&gt;\\S+\\)\\\\\\]: SASL \\(?:LOGIN|PLAIN|\\(?:CRAM|DIGEST\\)-MD5\\) authentication failed\\(: \\[A-Za-z0-9+/\\]\\*=\\{0,2\\}\\)?$\r\n\r\nI hope this can help ;\\)\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Updated regexp to match SASL failed logins",
+  "discussion_thread": {
+    "_id": "ef81c41e",
+    "posts": [
+      {
+        "text": "It would be also a good idea to prepend \\(?i\\) to make the whole regexp case-insensitive since one can initiate the authentication with SMTP command \"AUTH plain\" \\(and similarly for other method\\) and in the log there will be \"plain\", not \"PLAIN\".\r\nDavid",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2008-12-29 18:03:14",
+        "slug": "2436",
+        "subject": "#7 Updated regexp to match SASL failed logins"
+      },
+      {
+        "text": "It would be also a good idea to prepend \\(?i\\) to make the whole regexp case-insensitive since one can initiate the authentication with SMTP command \"AUTH plain\" \\(and similarly for other method\\) and in the log there will be \"plain\", not \"PLAIN\".\r\nDavid",
+        "attachments": [],
+        "author": "nobody",
+        "timestamp": "2008-12-29 18:03:14",
+        "slug": "1aaf",
+        "subject": "#7 Updated regexp to match SASL failed logins"
+      },
+      {
+        "text": "Committed. Will be in 0.8.4. Thank you.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2009-01-27 23:36:04",
+        "slug": "3902",
+        "subject": "#7 Updated regexp to match SASL failed logins"
+      },
+      {
+        "text": "- **status**: open --> closed-fixed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2009-01-27 23:36:04",
+        "slug": "6428",
+        "subject": "#7 Updated regexp to match SASL failed logins"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-01-27 23:36:04",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2df2718464f1a12ff42",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/ef81c41e/",
+  "ticket_num": 7,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-11-18 18:00:41"
+},{
+  "status": "closed-invalid",
+  "reported_by_id": "5042317071b75b1e688a0a8e",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "bigfoot_hunter",
+  "description": "The attached file, together with the following jail config, adds supports for netkit-ftpd.\r\n\r\n\\[netkit-ftpd\\]\r\n\r\nenabled  = true\r\nport     = ftp,ftp-data,ftps,ftps-data\r\nfilter   = netkit-ftpd\r\nlogpath  = /var/log/auth.log\r\nmaxretry = 6",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Filter for netkit-ftpd",
+  "discussion_thread": {
+    "_id": "aacaaf4c",
+    "posts": [
+      {
+        "text": "",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/aacaaf4c/2008/attachment/netkit-ftpd.conf",
+            "bytes": 634
+          }
+        ],
+        "author": "bigfoot_hunter",
+        "timestamp": "2008-11-20 10:05:33",
+        "slug": "2008",
+        "subject": "#8 Filter for netkit-ftpd"
+      },
+      {
+        "text": "Right, never mind this patch. On closer inspection I'm just matching the generic pam failure line, so using the existing pam\\_generic filter is more appropriate. Closing this issue again.",
+        "attachments": [],
+        "author": "bigfoot_hunter",
+        "timestamp": "2008-11-20 10:14:29",
+        "slug": "7bb0",
+        "subject": "#8 Filter for netkit-ftpd"
+      },
+      {
+        "text": "- **status**: open --> open-invalid",
+        "attachments": [],
+        "author": "bigfoot_hunter",
+        "timestamp": "2008-11-20 10:14:34",
+        "slug": "73b7",
+        "subject": "#8 Filter for netkit-ftpd"
+      },
+      {
+        "text": "- **status**: open-invalid --> closed-invalid",
+        "attachments": [],
+        "author": "bigfoot_hunter",
+        "timestamp": "2008-11-20 10:14:48",
+        "slug": "1f64",
+        "subject": "#8 Filter for netkit-ftpd"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2008-11-20 10:14:48",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2e12718464f1a12ff5e",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/aacaaf4c/",
+  "ticket_num": 8,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2008-11-20 10:05:33"
+},{
+  "status": "closed-fixed",
+  "reported_by_id": "509851015fcbc9179be5699e",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "eravin",
+  "description": "ban/unban actions for NetBSD ipfilter",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "action.d file for NetBSD ipfilter",
+  "discussion_thread": {
+    "_id": "eb7cbbf7",
+    "posts": [
+      {
+        "text": "action.d/ipfilter.conf (NetBSD ipfilter)",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/eb7cbbf7/ad54/attachment/ipfilter.conf",
+            "bytes": 1359
+          }
+        ],
+        "author": "eravin",
+        "timestamp": "2009-01-03 17:43:19",
+        "slug": "ad54",
+        "subject": "#9 action.d file for NetBSD ipfilter"
+      },
+      {
+        "text": "Committed. Will be in 0.8.4. Thank you.",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2009-01-27 23:40:02",
+        "slug": "c16c",
+        "subject": "#9 action.d file for NetBSD ipfilter"
+      },
+      {
+        "text": "- **status**: open --> closed-fixed",
+        "attachments": [],
+        "author": "lostcontrol",
+        "timestamp": "2009-01-27 23:40:02",
+        "slug": "14a5",
+        "subject": "#9 action.d file for NetBSD ipfilter"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-01-27 23:40:02",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2e32718464f1a12ff7f",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/eb7cbbf7/",
+  "ticket_num": 9,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-01-03 17:43:19"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "My log entries look like this \\(Ubuntu 8.10 with packages postfix and sasl2-bin\\):\r\n: warning: 114-44-114-205.dynamic.hinet.net\\[114.44.114.205\\]: SASL CRAM-MD5 authentication failed: authentication failure\r\nAnd these are found neither with 0.8.3 nor with the current SVN version. Regex that I suggest is\r\nfailregex = \\(?i\\): warning: \\[-.\\_\\w\\]+\\\\\\[&lt;HOST&gt;\\\\\\]: SASL \\(?:LOGIN|PLAIN|\\(?:CRAM|DIGEST\\)-MD5\\) authentication failed\r\nor\r\nfailregex = \\(?i\\): warning: \\[-.\\_\\w\\]+\\\\\\[&lt;HOST&gt;\\\\\\]: SASL \\(?:LOGIN|PLAIN|\\(?:CRAM|DIGEST\\)-MD5\\) authentication failed.\\*$\r\nif you insist on the final dollar.\r\n\r\nDavid\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "config/filter.d/sasl.conf (rejoinder to patch #2310410)",
+  "discussion_thread": {
+    "_id": "8cd71b7c",
+    "posts": [],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-03-31 18:25:49",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2e52718464f1a12ff9b",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/8cd71b7c/",
+  "ticket_num": 10,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-03-31 18:25:49"
+},{
+  "status": "open",
+  "reported_by_id": "50580ccf71b75b2189861d40",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "idl0r",
+  "description": "Hey guys,\r\n\r\nI had some issues with fail2ban when running more than 1 jail.\r\nSo I wrote a patch or even workaround to get all chains into iptables.\r\nIt might be good enough to apply it into the next release but thats up to you... maybe you guys are able to find a better solution since I didn't spent much time into it.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Patch for iptables issues when adding rules parallel",
+  "discussion_thread": {
+    "_id": "974bf99e",
+    "posts": [
+      {
+        "text": "action.py.patch",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/974bf99e/ba3d/attachment/action.py.patch",
+            "bytes": 2058
+          }
+        ],
+        "author": "idl0r",
+        "timestamp": "2009-09-11 19:30:24",
+        "slug": "ba3d",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      },
+      {
+        "text": "Hi idl0r, thanks for your patch - I nearly got crazy with this bug ...",
+        "attachments": [],
+        "author": "mcgege",
+        "timestamp": "2009-10-01 19:57:38",
+        "slug": "1ed5",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      },
+      {
+        "text": "This patch unfortunately breaks commands with multiline string arguments in them \\(e.g. sending an email notifications\\).\nOriginal problem is with concurrent execution of iptables commands by separate threads \\(there is 1 thread per jail in fail2ban\\) upon jail initiation. Possible solution is to sleep some random amount of time before executing the command.  It could be accomplished with adding smth like\n\nsleep $\\{RANDOM:0:1\\}.$\\{RANDOM: -1:1\\}\n\nto the beginning of actionstart/actionstop if you use bash for your shell",
+        "attachments": [],
+        "author": "yarikoptic",
+        "timestamp": "2009-11-11 13:42:38",
+        "slug": "2c7f",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      },
+      {
+        "text": "For more details see http://bugs.debian.org/554162",
+        "attachments": [],
+        "author": "yarikoptic",
+        "timestamp": "2009-11-11 13:43:26",
+        "slug": "4180",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      },
+      {
+        "text": "The fix with adding random sleeps is a workaround, but not the right long term fix. It's a design flaw to have the action\\{start,stop\\} executing in parallel IMO. Either they should be serialized, or a locking mechanism put in place to ensure that multiline commands are treated atomicly.",
+        "attachments": [],
+        "author": "junderwood",
+        "timestamp": "2010-01-04 15:09:24",
+        "slug": "6eba",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      },
+      {
+        "text": "could you or someone please be a bit more specific i am experiencing this bug but cannot get it fixed by patching \\(indeed because of broken lines\\) and i do not understand how next patch is applied, because i don't know python\n\n\"Possible solution is to sleep some random amount of time before\nexecuting the command. It could be accomplished with adding smth like\n\nsleep $\\{RANDOM:0:1\\}.$\\{RANDOM: -1:1\\}\n\nto the beginning of actionstart/actionstop if you use bash for your shell\"",
+        "attachments": [],
+        "author": "*anonymous",
+        "timestamp": "2010-11-18 03:12:57",
+        "slug": "6aca",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      },
+      {
+        "text": "I came up with a slightly different approach to fixing this bug. I changed executeCmd\\(\\) to a classmethod instead of a staticmethod. I also created a lock as a class variable, which prevents two calls to os.system from running in parallel from any instance of the Action class. It is perhaps not the prettiest solution, but it is a very small change and I believe it addresses the root of the problem without causing any side effects.\n\nI just modified the file in place on my system, but I can create and post a patch if anyone is interested.\n",
+        "attachments": [],
+        "author": "*anonymous",
+        "timestamp": "2011-09-20 21:54:05",
+        "slug": "5f88",
+        "subject": "#11 Patch for iptables issues when adding rules parallel"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-09-11 19:30:24",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2e52718464f1a12ffa2",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/974bf99e/",
+  "ticket_num": 11,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-09-11 19:30:24"
+},{
+  "status": "open",
+  "reported_by_id": "4fb32ede1be1ce76a00000ac",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "msapiro",
+  "description": "fail2ban filter.DNSUtils.dnsToIp\\(\\) calls socket.gethostbyname\\_ex\\(\\) to get the IP address\\(es\\) for a host name. It appears to do this for every matching log record without regard to whether it just looked up the same host.\r\n\r\nIf there is some DNS issue outside of fail2ban that slows DNS lookups and thus introduces delays into the processing of socket.gethostbyname\\_ex\\(\\), fail2ban can be slowed considerably resulting in significant delay before the IP is blocked.\r\n\r\nThe attached patch to server/filter.py adds a cache of the most recent 10 host names used in calls to DNSUtils.dnsToIp\\(\\), and returns a hit from the cache rather than doing a new socket.gethostbyname\\_ex\\(\\) call.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Patch to reduce DNS lookups",
+  "discussion_thread": {
+    "_id": "20363b6b",
+    "posts": [
+      {
+        "text": "patch to server/filter.py",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/20363b6b/9705/attachment/filter.py.patch",
+            "bytes": 1747
+          }
+        ],
+        "author": "msapiro",
+        "timestamp": "2009-10-10 18:59:49",
+        "slug": "9705",
+        "subject": "#12 Patch to reduce DNS lookups"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-10-10 18:59:49",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2ec2718464f1a12ffd8",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/20363b6b/",
+  "ticket_num": 12,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-10-10 18:59:49"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Would like to see this applied to SVN so I dont have to patch my installs in the future:\r\n\r\n-failregex = ^%\\(\\_\\_prefix\\_line\\)s\\(?:error: PAM: \\)?Authentication failure for .\\* from &lt;HOST&gt;\\s\\*$\r\n+failregex = ^%\\(\\_\\_prefix\\_line\\)s\\(?:error: PAM: \\)?\\[A|a\\]uthentication failure for .\\* from &lt;HOST&gt;\\s\\*$\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "sshd-filter patch",
+  "discussion_thread": {
+    "_id": "7d5185fa",
+    "posts": [],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-11-07 10:11:10",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2ed2718464f1a12ffe9",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/7d5185fa/",
+  "ticket_num": 13,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-11-07 10:11:10"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Filter code for new dovecot filter:\r\n\r\n\\[Definition\\]\r\nfailregex = \\(?: pop3-login|imap-login\\): \\(?:Authentication failure|Aborted login \\\\\\(auth failed|Disconnected \\\\\\(auth failed\\).\\*rip=\\(?P&lt;host&gt;\\S\\*\\),.\\*\r\nignoreregex =\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "dovecot filter",
+  "discussion_thread": {
+    "_id": "21739102",
+    "posts": [],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2009-11-07 10:12:18",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2ef2718464f1a12fff0",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/21739102/",
+  "ticket_num": 14,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2009-11-07 10:12:18"
+},{
+  "status": "open",
+  "reported_by_id": "5171d71034309d2ea3b170e3",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "junderwood",
+  "description": "This patch adds pyinotify support to Fail2ban. It's a patch against\r\nthe FAIL2BAN-0\\_8 branch.\r\n\r\nIn particular this patch uses inotify support in preference to gamin\r\nsupport when the jail type is set to auto. This patch is in large part\r\nmotivated by the large number of SElinux problems that using gamin\r\ngives. In short, gamin was never designed to be used in the way that\r\nfail2ban tries to use it - it was designed to have a single server per\r\nUID, and targets the desktop user needs, rather than the system needs.\r\nThe gory details can be found discussed here:\r\nhttps://bugzilla.redhat.com/show\\_bug.cgi?id=437633\r\n\r\nPresently this patch favours inotify use over gamin. Longer term,\r\ngamin should probably be removed from fail2ban.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Add pyinotify support",
+  "discussion_thread": {
+    "_id": "5ab19b13",
+    "posts": [
+      {
+        "text": "Add pyinotify support",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/5ab19b13/ea41/attachment/pyinotify.patch",
+            "bytes": 7433
+          }
+        ],
+        "author": "junderwood",
+        "timestamp": "2010-01-02 20:39:38",
+        "slug": "ea41",
+        "subject": "#15 Add pyinotify support"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2010-01-02 20:39:38",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2ef2718464f1a12fff7",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/5ab19b13/",
+  "ticket_num": 15,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2010-01-02 20:39:38"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Set socket file descriptor in AsyncServer.start to be CLOEXEC\r\n\r\nThis hopefully fixes some of the selinux messages in\r\n\r\nhttps://bugzilla.redhat.com/show\\_bug.cgi?id=522767",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Set socket file descriptor in AsyncServer.start to be CLOEXE",
+  "discussion_thread": {
+    "_id": "4b6a476f",
+    "posts": [
+      {
+        "text": "Set socket file descriptor in AsyncServer.start to be CLOEXEC",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/4b6a476f/46e9/attachment/asyncserver.start_selinux.patch",
+            "bytes": 1218
+          }
+        ],
+        "author": "nobody",
+        "timestamp": "2010-01-03 02:47:12",
+        "slug": "46e9",
+        "subject": "#16 Set socket file descriptor in AsyncServer.start to be CLOEXE"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2010-01-03 02:47:11",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f02718464f1a130008",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/4b6a476f/",
+  "ticket_num": 16,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2010-01-03 02:47:11"
+},{
+  "status": "open",
+  "reported_by_id": "50f863422718467747a4a2b9",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "kubiis",
+  "description": "Fail2ban can't start on OpenVZ host server if any guest has a fail2ban instance started - because of PID check in init script.\r\nPrepared patch for init script is added as attachment.\r\n\r\nhttps://bugzilla.redhat.com/show\\_bug.cgi?id=670437\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "redhat-initd: OpenVZ support",
+  "discussion_thread": {
+    "_id": "fbe26259",
+    "posts": [
+      {
+        "text": "Suport for OpenVZ host server; check pid of running instance via vzpid",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/fbe26259/0f47/attachment/redhat-initd.patch",
+            "bytes": 1013
+          }
+        ],
+        "author": "kubiis",
+        "timestamp": "2011-01-18 10:12:24",
+        "slug": "0f47",
+        "subject": "#17 redhat-initd: OpenVZ support"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2011-01-18 10:12:24",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f12718464f1a130019",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/fbe26259/",
+  "ticket_num": 17,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-01-18 10:12:24"
+},{
+  "status": "open",
+  "reported_by_id": "50abc3d1e88f3d0bb0c7b5d6",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "cepheid666",
+  "description": "The Logwatch v7.x script does not work properly with the output format of the current fail2ban \\(v0.8.4\\).  The attached patch updates the ignored and processed lines to match the current output format.  \\(There are more adjustments needed, particularly to the WARNING lines, since I did not have those output lines available to test... but the patched file works for most output.\\)",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Updates to logwatch script",
+  "discussion_thread": {
+    "_id": "fdad5678",
+    "posts": [
+      {
+        "text": "Updated patch file to fix a couple of things.",
+        "attachments": [],
+        "author": "cepheid666",
+        "timestamp": "2011-03-08 09:08:33",
+        "slug": "92d5",
+        "subject": "#18 Updates to logwatch script"
+      },
+      {
+        "text": "fail2ban logwatch update patch",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/fdad5678/90b8/attachment/fail2ban_logwatch_update.diff",
+            "bytes": 1572
+          }
+        ],
+        "author": "cepheid666",
+        "timestamp": "2011-03-08 09:09:26",
+        "slug": "90b8",
+        "subject": "#18 Updates to logwatch script"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2011-03-07 09:32:57",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f42718464f1a13002c",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/fdad5678/",
+  "ticket_num": 18,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-03-07 09:32:57"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Problem:\r\n\r\nCurrently the command, fail2ban-client set &lt;jail&gt; banip &lt;ip&gt;,  doesn't actually ban an ip address but instead just registers a failure with the fail manager.\r\n\r\nDesired behavior:\r\n\r\nThe requested IP address should be banned.\r\n\r\nSolution:\r\n\r\nPlease see the attached patch file.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "fail2ban-client set <jail> banip <ip> fix",
+  "discussion_thread": {
+    "_id": "9a2558c8",
+    "posts": [
+      {
+        "text": "fail2ban-client set <jail> banip <ip> fix",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/9a2558c8/f7c7/attachment/fail2ban-manual-bans.patch",
+            "bytes": 360
+          }
+        ],
+        "author": "*anonymous",
+        "timestamp": "2011-08-27 12:31:17",
+        "slug": "f7c7",
+        "subject": "#19 fail2ban-client set <jail> banip <ip> fix"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2011-08-27 12:31:16",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f52718464f1a130043",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/9a2558c8/",
+  "ticket_num": 19,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-08-27 12:31:16"
+},{
+  "status": "open",
+  "reported_by_id": null,
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "*anonymous",
+  "description": "Actions that call iptables fail when they are run at the same time by separate threads. I have added a lock to disallow prevent the problem. The patch should be applied to server/action.py\r\n\r\nThere is another patch for this problem at https://sourceforge.net/tracker/?func=detail&aid=2857096&group\\_id=121032&atid=689046 but it is more extensive and causes another problem detailed in the link provided. My patch changes as little as possible to fix the problem.",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Fix for iptables actions failing when run concurrently.",
+  "discussion_thread": {
+    "_id": "f9dc936c",
+    "posts": [
+      {
+        "text": "patch adding locking to executeCmd1",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/f9dc936c/e457/attachment/action_executeCmd_locking.diff",
+            "bytes": 1503
+          }
+        ],
+        "author": "*anonymous",
+        "timestamp": "2011-09-24 01:27:50",
+        "slug": "e457",
+        "subject": "#20 Fix for iptables actions failing when run concurrently."
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2011-09-24 01:27:49",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f62718464f1a130054",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/f9dc936c/",
+  "ticket_num": 20,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-09-24 01:27:49"
+},{
+  "status": "open",
+  "reported_by_id": "506f068071b75b10ebc2b3fd",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "adamspiers",
+  "description": "See: https://sourceforge.net/tracker/?func=detail&aid=3413745&group\\_id=121032&atid=689044\r\n\r\nOn Fedora 15, some of my syslog messages contain kernel timestamps, such as:\r\n\r\nSep 25 12:51:01 myhost kernel: \\[773577.436184\\] sshd\\[25551\\]: Invalid user pgsql from 91.203.223.206\r\nSep 25 13:01:01 myhost kernel: \\[774178.096112\\] run-parts\\(/etc/cron.hourly\\)\\[26252\\]: finished mcelog.cron\r\n\r\nThe definition of \\_\\_prefix\\_line in filter.d/common.conf fails to recognise these. Patch attached but also available here:\r\n\r\nhttps://github.com/aspiers/Fail2Ban/commit/bdbb36434647a7c34b084ff7bf4f8ab31f846d3e",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "patch for issue 3413745 (kernel timestamps)",
+  "discussion_thread": {
+    "_id": "dd95bd6a",
+    "posts": [
+      {
+        "text": "",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/dd95bd6a/6809/attachment/0001-Recognise-time-stamped-kernel-messages.patch",
+            "bytes": 1442
+          }
+        ],
+        "author": "adamspiers",
+        "timestamp": "2011-09-25 12:11:05",
+        "slug": "6809",
+        "subject": "#21 patch for issue 3413745 (kernel timestamps)"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2011-09-25 12:11:04",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f72718464f1a130065",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/dd95bd6a/",
+  "ticket_num": 21,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2011-09-25 12:11:04"
+},{
+  "status": "open",
+  "reported_by_id": "51acf2f92718464f1a130078",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "staffnowa",
+  "description": "Hello,\r\n\r\nmaybe need add some additional rules if file. For example\r\n\r\nfailregex = sshd\\(?:\\\\\\[\\d+\\\\\\]\\)?: Did not receive identification string from &lt;HOST&gt;$\r\nsshd\\(?:\\\\\\[\\d+\\\\\\]\\)?: Invalid user .\\* from &lt;HOST&gt;$\r\nsshd\\(?:\\\\\\[\\d+\\\\\\]\\)?: Received disconnect from &lt;HOST&gt;: 11: Bye Bye$\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "sshd-ddos.conf",
+  "discussion_thread": {
+    "_id": "3ec9a214",
+    "posts": [],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2012-10-27 21:37:47",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2f92718464f1a130077",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/3ec9a214/",
+  "ticket_num": 22,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2012-10-27 21:37:47"
+},{
+  "status": "open",
+  "reported_by_id": "4fd9aebdb9363c12100000ba",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "oobayly",
+  "description": "I submitted a feature request along with the patches required two years ago:\r\nhttps://sourceforge.net/tracker/?func=detail&aid=3082918&group\\_id=121032&atid=689047\r\n\r\nThey still haven't been incorporated, so I'm going to try again.\r\n\r\nPatch datedetector.py so it can match MySQL log dates\r\nAdd MySQL filter.\r\n\r\nPlease can these be added to the next release - the work's been done for you\\!",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "MySQL support",
+  "discussion_thread": {
+    "_id": "5170a967",
+    "posts": [
+      {
+        "text": "MySQL filter",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/5170a967/03d1/attachment/mysql.conf",
+            "bytes": 668
+          }
+        ],
+        "author": "oobayly",
+        "timestamp": "2012-11-26 12:19:07",
+        "slug": "03d1",
+        "subject": "#23 MySQL support"
+      },
+      {
+        "text": "datedetector.py patch",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/5170a967/0887/attachment/datedetector.py.diff",
+            "bytes": 626
+          }
+        ],
+        "author": "oobayly",
+        "timestamp": "2012-11-26 12:27:48",
+        "slug": "0887",
+        "subject": "#23 MySQL support"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2012-11-26 12:19:03",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2fc2718464f1a13009c",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/5170a967/",
+  "ticket_num": 23,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2012-11-26 12:19:03"
+},{
+  "status": "open",
+  "reported_by_id": "4ed8b9f30594ca12f20004a6",
+  "related_artifacts": [],
+  "attachments": [],
+  "reported_by": "ivan",
+  "description": "Hi,\r\nFirst at all, thank you very much for this great soft \\!\r\n\r\nSo, as i'm currently fighting against DoS and SYN flood, i created a new action and filter to deal with that.\r\n\r\nFirst, you need to create some iptables rules :\r\n\\(exemple of stateful firewall which act as when more than 100 new cnx/sec are detected : it's an attack so ban\\)\r\n\r\niptables -A INPUT -i eth0 -p tcp -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT\r\niptables -A INPUT -i eth0 -p tcp --dport $\\{PORT\\} --syn -m limit --limit 100/second --limit-burst 5 -m conntrack --ctstate NEW -j ACCEPT\r\niptables -A INPUT -i eth0 -p tcp -m limit --limit 15/minute -j LOG --log-level alert --log-prefix \"DROP:INPUT \"\r\niptables -A INPUT -i eth0 -p tcp -j DROP\r\n\r\nNote : \"DROP:INPUT \" This is the prefix is used by this Fail2ban filter.\r\n\r\nAfter that, create a new entry in jail.conf :\r\n\r\n\\[flood-iptables-mac\\]\r\nenabled  = true\r\nfilter   = iptables-drop\r\naction   = iptables-mac\\[name=FLOOD, protocol=tcp \\]\r\nsendmail-whois\\[name=FLOOD, dest=me@mydomain, sender=fail2ban@mydomain\\]\r\nlogpath  = /var/log/kernel.log\r\nmaxretry = 5\r\nbantime  = 3600\r\n\r\nThe result if somebody try a 'hping3 --syn --flood --rand-source MY\\_IP' :\r\n\r\n\\# iptables -vnL fail2ban-FLOOD\r\nChain fail2ban-FLOOD \\(1 references\\)\r\npkts bytes target     prot opt in     out     source               destination         \r\n316K   13M DROP       all  --  \\*      \\*       0.0.0.0/0            0.0.0.0/0            MAC XX:XX:XX:XX:XX:XX\r\n65839   44M RETURN     all  --  \\*      \\*       0.0.0.0/0            0.0.0.0/0           \r\n\r\nAs I'm a poor regex user, i upload my conf file 'asis', perhaps somebody could fix it...\r\nHope be usefull...\r\n",
+  "labels": [],
+  "assigned_to": "nobody",
+  "assigned_to_id": null,
+  "private": false,
+  "summary": "Use MAC address to ban (SYN flood)",
+  "discussion_thread": {
+    "_id": "438a900f",
+    "posts": [
+      {
+        "text": "/etc/fail2ban/filter.d/iptables-drop.conf",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/438a900f/5769/attachment/iptables-drop.conf",
+            "bytes": 387
+          }
+        ],
+        "author": "ivan",
+        "timestamp": "2013-05-17 01:49:47",
+        "slug": "5769",
+        "subject": "#24 Use MAC address to ban (SYN flood)"
+      },
+      {
+        "text": "/etc/fail2ban/action.d/iptables-mac.conf",
+        "attachments": [
+          {
+            "url": "http://sourceforge.net/p/fail2ban/patches/_discuss/thread/438a900f/b244/attachment/iptables-mac.conf",
+            "bytes": 858
+          }
+        ],
+        "author": "ivan",
+        "timestamp": "2013-05-17 01:52:15",
+        "slug": "b244",
+        "subject": "#24 Use MAC address to ban (SYN flood)"
+      }
+    ],
+    "discussion_id": "51acf2cd2718464f1a12fe63",
+    "subject": ""
+  },
+  "mod_date": "2013-05-17 01:49:46",
+  "votes_down": 0,
+  "votes_up": 0,
+  "_id": "51acf2ff2718464f1a1300b8",
+  "discussion_thread_url": "http://sourceforge.net/rest/p/fail2ban/patches/_discuss/thread/438a900f/",
+  "ticket_num": 24,
+  "custom_fields": {
+    "_priority": "5"
+  },
+  "created_date": "2013-05-17 01:49:46"
+}],
+"tracker_config":{
+  "_id": "51acf2cd2718464f1a12fe61",
+  "options": {
+    "ordinal": 7,
+    "import_id": "tracker/689046",
+    "mount_point": "patches",
+    "TicketMonitoringType": null,
+    "EnableVoting": false,
+    "TicketMonitoringEmail": "",
+    "mount_label": "Patches"
+  }
+},
+"milestones":[
+  {
+    "due_date": null,
+    "complete": true,
+    "name": "Unstable (example)",
+    "closed": 0,
+    "total": 0,
+    "description": "Unstable (example)"
+  }
+],
+"custom_fields":[
+  {
+    "milestones": [
+      {
+        "due_date": null,
+        "description": "Unstable (example)",
+        "complete": true,
+        "name": "Unstable (example)"
+      }
+    ],
+    "type": "milestone",
+    "name": "_milestone",
+    "label": "Group"
+  },
+  {
+    "label": "Priority",
+    "type": "select",
+    "options": "1 2 3 4 *5 6 7 8 9",
+    "name": "_priority"
+  }
+],
+"open_status_names":"open unread pending",
+"closed_status_names":"wont-fix closed-fixed closed-accepted closed-invalid",
+"saved_bins":[
+  {
+    "sort": "mod_date_dt desc",
+    "_id": "51acf2cd2718464f1a12fe69",
+    "terms": "!status:closed-accepted && !status:wont-fix && !status:closed-invalid && !status:closed-fixed",
+    "summary": "Changes"
+  },
+  {
+    "sort": "",
+    "_id": "51acf2cd2718464f1a12fe68",
+    "terms": "status:closed-accepted or status:wont-fix or status:closed-invalid or status:closed-fixed",
+    "summary": "Closed Tickets"
+  },
+  {
+    "sort": "",
+    "_id": "51acf2cd2718464f1a12fe67",
+    "terms": "!status:closed-accepted && !status:wont-fix && !status:closed-invalid && !status:closed-fixed",
+    "summary": "Open Tickets"
+  }
+]}
